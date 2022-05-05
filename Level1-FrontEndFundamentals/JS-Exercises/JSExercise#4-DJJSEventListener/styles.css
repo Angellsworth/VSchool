@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(245, 230, 239);
+}
+
+div {
+  display: flex;
+  width: 300px;
+  height: 900px;
+  justify-content: center;
+  background-color: white;
+  margin-left: 520px;
+  border: 3px solid black;
+  cursor: crosshair;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

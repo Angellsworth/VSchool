@@ -1,0 +1,25 @@
+body {
+    background-color: #111111;
+}
+h1 {
+    color: #e2e80f;
+    text-align: center;
+    font-size: xx-large;
+}
+p {
+    color: #eeeeee;
+    font-size: 1.2em;
+    line-height: 25px;
+}
+.credits {
+    color: #49daff;
+    text-decoration: underline;
+}
+.credits:hover {
+    cursor: pointer;
+}
+p2 {
+    font-style: italic;
+    font-size: smaller;
+    color: #eeeeee;
+  }

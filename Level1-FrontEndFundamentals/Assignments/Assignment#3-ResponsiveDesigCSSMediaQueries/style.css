@@ -1,0 +1,32 @@
+#box {
+    border: 2px solid black;
+}
+#box > h1 {
+    background-color: dodgerblue;
+}
+/* Larger Phones */
+@media only screen and (min-width: 400px){
+    #box {
+        border: 2px dashed green;
+    }
+    #box > h1 {
+        background-color: firebrick;
+    }  
+
+}
+/* Tablet */
+@media only screen and (min-width: 650px){
+    #box {
+        border: 5px dashed purple;
+    }
+    #box > h1 {
+        background-color: cornflowerblue;
+    }  
+
+}
+
+@media only screen and (min-width: 650px) and (max-width: 700px) {
+    body {
+        background-color: yellow;
+    }
+}

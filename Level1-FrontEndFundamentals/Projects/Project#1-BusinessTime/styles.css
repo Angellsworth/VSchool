@@ -1,0 +1,166 @@
+/*homepage*/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+  li {
+    display: inline-block;
+    background-color:;
+    height: 35px;
+  }
+
+  .navbar {
+    width: 100%;
+    background-color: #334133;
+    overflow: auto;
+  }
+
+  .navbar a {
+    padding: 100px;
+    color: ivory;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17.7px;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .navbar a:hover {
+    background-color: #C15047;
+    cursor: pointer;
+    color: white;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 140%;
+      text-align: left;
+    }
+  }
+
+  img {
+      position: relative;
+      float: left;
+      margin: 30px 20px 10px 10px;
+  }
+
+  body {
+      background-color: #9b9d87a6;
+      background-image: url(Assets/background-zipper.png);    
+      
+  }
+ 
+ .description p {
+      font-family: 'Oswald', sans-serif;
+      font-size: 25px; 
+      margin: 55px;
+  }
+
+  .description {
+    padding: 20px 30px 10px 300px;
+    margin-right: 250px;
+    
+  }
+
+  .description a {
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 300px;
+  }
+
+/*contactpage*/
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 10px; 
+  margin-bottom: 20px; 
+  resize: vertical;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  color: #C15047;
+}
+
+/*submitbutton*/
+input[type=submit] {
+  background-color: #334133;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+}
+
+/*submitbuttonwhenhovered*/
+input[type=submit]:hover {
+  background-color: #C15047;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #9294959d;
+  padding: 20px;
+  
+}
+/*aboutpage*/
+.about {
+  padding: 0px 150px 10px 400px;
+  margin-right: 250px;
+  display: block;
+  font-size: 20px;
+}
+
+.image {
+  float: center;
+  margin-right: 20px;
+  margin-left: 150px;
+  justify-content: center;
+
+}
+
+/*membershippage*/
+.card {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  background-color: #9b9d87;
+  font-size: 20px;
+}
+.price {
+  color: black;
+  font-size: 20px;
+}
+.column {
+  float: left;
+  padding: 0px 10px;
+  margin: 70px;
+}
+
+.row {
+  display: block;
+
+  margin-bottom: 500px;
+}
+
+
+.row:after {
+  
+  display: table;
+  clear: both;
+}
+/*terms*/
+
+

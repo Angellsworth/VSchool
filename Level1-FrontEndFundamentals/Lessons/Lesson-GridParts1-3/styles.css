@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#grid-container {
+    display: grid;
+    /*a grid needs columns - we assigned 3 columns*/
+    grid-template-columns: 1fr 1fr 1fr;
+}
+header {
+    font-size: 22px;
+    background-color: dodgerblue;
+    text-align: center;
+    /*telling where to go on page*/
+    grid-column: 1/4;
+}
+
+nav {
+    background-color: darkorchid;
+    /*telling where to go on page*/
+    grid-column: 1/2;
+}
+nav > div {
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+main {
+    background-color: darkgreen;
+    /*telling where to go on page*/
+    grid-column: 2/4;
+}
+
+footer {
+    font-size: 20px;
+    background-color: darkslateblue;
+    text-align: center;
+   /*telling where to go on page*/
+    grid-column: 1/4;
+}

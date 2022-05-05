@@ -1,0 +1,48 @@
+body{
+    background-image: url(assets/math-equations-theorems-digital-art-pk8kxc3pvndyc1wz.jpg);
+    padding: 100px;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+h1{
+    text-align: center;
+}
+.container {
+    background-color: rgb(44, 49, 124);
+    max-width: 600px;
+    margin: auto;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    border: 3px solid black;
+    color: whitesmoke;
+    font-size: 20px;
+}
+input{
+    width: 200px;
+    background-color: whitesmoke;
+    border:2px solid black;
+    padding: 5px;
+    font-size: larger;
+     
+}
+#selector {
+    width: 15px;
+}
+button{
+    background-color: rgb(38, 150, 56);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: larger;
+}
+button:hover{
+    background-color: yellowgreen;
+    color:whitesmoke;
+    transition: 0.5s ease-in-out;
+
+}

@@ -1,0 +1,39 @@
+HTML
+    - Hypertext Markup Language
+
+    - Tags
+    <h1>HTML Elements</h1> (large header)
+
+    - Elements (predefined)
+    h1 Tag (largest of header tags uses whole block)
+    p Tag (paragraph)
+    span Tag (positions side by side)
+    img Tag (self closing tag <img /> needs an attribute like source src="")
+    div Tag   (like boxes)
+    link Tag (add links from websites)
+    script Tag (link Java Script)
+    form Tag (used for information with an input self closing tag)
+    button Tag 
+    a tag (like an img tag but takes an href="")
+
+    - Attributes (to cofigure the elements within html or css)
+    src
+    href
+    width (px)
+    script takes src
+
+
+Basic Boiler Plate
+
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+</head>
+
+<body>
+    <h1>Introduction to HTML</h1>
+</body>
+
+</html>

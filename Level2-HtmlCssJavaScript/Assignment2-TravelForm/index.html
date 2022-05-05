@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/airplane-thumbnail.png" type="image/x-icon">
+    <title>Travel Form</title>
+</head>
+
+<body>
+    <h1>Travel Form</h1>
+    <div class='container'>
+        <form name='clientInfo'>
+            Enter First Name: <input type='text' name='firstName' placeholder="First Name" />
+            <br><br>
+            Enter Last Name: <input type='text' name='lastName' placeholder="Last Name" />
+            <br><br>
+            Enter Age: <input type='number' name='age' placeholder="Age" />
+            <br><br>
+            Gender: Female<input type='radio' name='gender' value='Female' />
+            Male<input type='radio' name='gender' value='Male' />
+            <br><br>
+            Traveling to: <select name='Destination'>
+                <option value='Amsterdam, Netherlands, AMS' id='Netherlands'>Amsterdam, Netherlands, AMS</option>
+                <option value='Mexico City, Mexico, MEX' id='Mexico'>Mexico City, Mexico, MEX</option>
+                <option value='Munich, Germany, MUC' id='Germany'>Munich, Germany, MUC</option>
+                <option value='Salt Lake City, Utah, SLC' id='Utah'>Salt Lake City, Utah, SLC</option>
+                <option value='Seoul, South Korea, ICN' id='SouthKorea'>Seoul, South Korea, ICN</option>
+            </select>
+            <br><br>
+            Dietary Restrictions: Vegetarian<input type='checkbox' value=' Vegetarian' name='vegetarian' />
+            Kosher<input type='checkbox' value=' Kosher' name='kosher' />
+            Lactose-Free<input type='checkbox' value=' Lactose-free' name='lactose-free' />
+            <br><br>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

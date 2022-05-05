@@ -1,0 +1,14 @@
+input {
+  height: 30px;
+  margin: 15px;
+  font-size: 14px;
+  background-color: rgb(247, 241, 227);
+}
+
+button {
+  padding: 5px;
+  margin: 15px 15px 10px 1px;
+  font-size: 14px;
+  background-color: rgb(162, 186, 218);
+  box-shadow: 4px 3px rgb(194, 194, 200);
+}

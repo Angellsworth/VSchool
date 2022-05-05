@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+header {
+    font-size: 22px;
+    background-color: dodgerblue;
+    text-align: center;
+    grid-column: 1/ 13;
+}
+
+nav {
+    background-color: darkorchid;
+    grid-column: 1/5;
+}
+nav > div {
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+main {
+    background-color: darkgreen;
+    grid-column: 1/8;
+    grid-row: 2/3;
+}
+
+footer {
+    font-size: 20px;
+    background-color: darkslateblue;
+    text-align: center;
+    grid-column: 1/13;
+}
