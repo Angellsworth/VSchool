@@ -5,7 +5,7 @@ body {
 div {
   display: flex;
   width: 300px;
-  height: 900px;
+  height: 300px;
   justify-content: center;
   background-color: white;
   margin-left: 520px;

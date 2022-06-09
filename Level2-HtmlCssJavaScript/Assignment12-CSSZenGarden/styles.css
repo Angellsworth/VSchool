@@ -1,0 +1,413 @@
+@font-face {
+    font-family: arrow;
+    src: url(./Assets/verdemoderna.ttf);
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+intro {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 28.5px;
+}
+
+.arrow::before {
+    content: ">";
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 44px;
+    font-family: arrow;
+    line-height: 70px;
+}
+
+.headerButton {
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255, 255, 255, 0.65);
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+    height: 70px;
+    width: 230px;
+    font-size: 1.2em;
+    margin: .6px; 
+}
+.headerButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.arrow {
+    width: 70px;
+}
+
+body {
+    background-color: #BFD8C9;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
+    padding: 0;
+    margin: 0; 
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+img {
+     height: 125px;
+     width: 125px;   
+     margin: 50px 40px 0 10%; 
+     
+  }
+
+u {
+      text-decoration: underline dotted;
+  }
+
+h1 {
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 3.2em; 
+    font-weight: 200;  
+    margin: 15px 0 0 0;
+    padding: 60px 0 5px 0;
+  }
+
+h2 {
+    font-style: italic;
+    font-family: 'Libre Baskerville', sans-serif; 
+    margin: 0px; 
+    padding: 5px 0 60px 0px;
+}
+
+.container {
+    width: 100vw;
+    height: 60vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: [col-start]1fr [col-2]1fr [col-3] 1fr;
+    grid-template-rows: 300px 1030px 800px 830px 330px 195px;
+    grid-template-areas:
+    "header header header" 
+    "main1 main1 side1" 
+    "main2 main2 side2"
+    "main3 main3 side3"
+    "footer1 footer1 footer1"
+    "footer2 footer2 footer2";
+}
+
+p {
+    text-align: left;
+    /* margin: 10px; 
+    margin-left: 70px;   */
+}
+
+.headerLeft {
+    display: flex;
+    width: 70%;
+
+}
+
+.headerMain {
+    display: flex;
+      background-color: rgba(249, 252, 252);
+      grid-area: header;
+      background-image: url(assets/contours-opaque.png), url(assets/noise.png), url(assets/gridlines.png), url(assets/huntington.jpg);
+      background-position: 0 0, 0 0, -5px -25px, 0 50%;
+      background-size: 50% auto, auto, auto, cover;
+      background-attachment: fixed, fixed, fixed, scroll;
+      background-repeat: repeat, repeat, repeat, no-repeat;
+      color: #BAC8C7;
+      justify-content: space-between;
+      border-top: solid 12px rgba(19,67,71,0.8);
+      box-shadow: inset 0 0 100px rgb(255 255 255 / 30%);
+  }
+
+.headerMain::before{
+    display: block;
+    content: " ";
+    position: absolute;
+    z-index: 3;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: rgba(0, 39, 43, 0.2);
+}
+
+.headerSide {
+      color: #BAC8C7;
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+  }
+.main1 {
+      background-color: #ffffff;
+      grid-area: main1;
+      font-size: 16px;
+      color: #325050;
+      padding: 52px 75px 64px 138px;
+      line-height: 2; 
+          
+  }
+
+.arrowLink {
+      font-family: arrow;
+      color: #a9b995;
+      background-color: #d9e1cd;
+      text-decoration: none;
+      padding: 2px;
+      margin-right: 2px;
+  }
+/* .arrowLink:hover {
+    
+} */
+
+.main1Link {
+      color: #809b7e;
+      font-family: 'Julius Sans One', sans-serif;
+      text-decoration: none;
+      font-size: 17px;
+      padding: 8px 10px 4px 10px;
+  }
+  .main1Link:hover {
+      z-index: 3;
+      color: #fff;
+      background: #3d8a9f;
+      text-decoration: none;
+  }
+  .main1Link:hover .arrowLink {
+      background-color: #357d93;
+      color: #ffffff;
+  }
+
+.side1 {
+      background-color: #E4ECE7;
+      grid-area: side1;
+      color: #C0CAC2;
+      font-style: italic;
+      padding-top: 50px;
+  }
+
+.sideBar1Link {
+    font-family: 'Julius Sans One', sans-serif;
+    font-style: normal;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #607476;
+}
+
+.sideBar1Link:hover {
+    color:#49968e;
+    transition: all .25s ease-out;
+}
+
+.name {
+    display: inline-block;
+    margin-top: 5px;
+    font-family:'Libre Baskerville', sans-serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #616857; 
+}
+
+.linkContainer {
+    padding: 1.5em 0;
+    margin: 0 30% 0 15%;
+}
+
+.linkContainer:not(:first-child) {
+    border-top: solid 1px #d9e3dc;
+}
+  
+.main2 {
+      background-color: #c9e0d2ec;
+      grid-area: main2;
+      background-image: url(assets/contours-opaque.png), url(assets/gridlines-opaque.png), url(assets/bamboo.png) ;
+      background-position: 0 0, 0 0, 0 0; 
+      background-size: auto, auto, cover;
+      background-attachment: scroll, scroll, fixed;
+      background-repeat: repeat, repeat, no-repeat;
+      color: #325050;
+      font-size: 16px;
+      padding: 52px 75px 64px 138px;
+      line-height: 2; 
+  }
+
+.main2::before{
+    display: block;
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: rgba(0, 39, 43);
+}
+
+.main2a {
+    color: #0d8ba1;
+    text-decoration: none;
+}
+
+.main2a:hover{
+    text-decoration: underline;
+}
+
+.side2 {
+      background-color: #b2cdbc;
+      grid-area: side2;
+      background-image: url(assets/contours-opaque.png), url(assets/gridlines-opaque.png), url(assets/bamboo.png);
+      background-position: 0 0, 0 0, 0 0; 
+      background-size: auto, auto, cover;
+      background-attachment: scroll, scroll, fixed;
+      background-repeat: repeat, repeat, no-repeat;
+      padding-top: 50px;
+  }
+
+.sideBar2Link {
+      color: #607476;
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 19.2px;
+      text-decoration: none;
+  }
+
+.sideBar2Link:hover{
+      color: #49968e;
+  }
+
+.linkContainerSide2 {
+    padding: 1.5em 0;
+    margin: 0 30% 0 15%;
+    border-top: solid 1px #a0b9ad;
+}
+
+.linkContainerSide2:last-child {
+    border-bottom: solid 1px #a0b9ad;;
+}
+
+.main3 {
+      background-color: #ffffff;
+      grid-area: main3;
+      color: #325050;
+      font-size: 16px;
+      padding: 52px 75px 64px 138px;
+      line-height: 2; 
+  }
+
+.main3a{
+    color: #0d8ba1;
+    text-decoration: none;
+}
+
+.main3a:hover{
+    text-decoration: underline;
+}
+
+.side3 {
+      background-color: #E4ECE7;
+      grid-area: side3;
+      color: #325050;
+  }
+
+.footer1 {
+      background-color: #3e5d67;;
+      grid-area: footer1;
+      padding: 5em 3em 3em 3em;
+      background-image: url(assets/contours@2x.png), url(assets/gridlines.png), url(assets/noise.png), url(assets/koi.jpg);
+      background-position: 0 0,  -5px -25px, 0 0, 0 50%;
+      background-size: 50% auto, auto, auto, cover;
+      background-attachment: fixed, fixed, fixed, scroll;
+      background-repeat: repeat, repeat, repeat, no-repeat;
+      
+  }
+
+.foot1notes {
+      display: block;
+      text-align: center;
+      font-size: 32px;
+      font-style: italic;
+      color: #8DA1A3;
+  }
+
+.foot1link {
+      font-family: 'Libre Baskerville', sans-serif;
+      font-size: 32px;
+      text-decoration: none;
+      font-style:normal;
+      color:#FFFFFFB3;
+  }
+
+.foot1link:hover {
+      text-decoration: underline;
+  }
+
+.footer2 {
+      background-color:#134347;
+      grid-area: footer2;
+      display: block;
+      text-align: center;
+      font-family: arrow;
+      font-size: 72px;
+      padding-top: 50px;
+  }
+.footer2 a {
+    text-decoration: none;
+    padding: 45px;
+    color: #8DA1A3;
+}
+
+.validateHTML::before {
+    content: '5';
+}
+.validateHTML:hover::before{
+    content: '%';
+}
+
+.validateCSS::before {
+    content: '3';
+}
+.validateCSS:hover::before{
+    content: '#';
+}
+.licenseCC::before{
+    content: 'c';
+}
+.licenseCC:hover::before {
+    content: 'C';
+}
+
+.wheelChair::before {
+    content: 'a'
+}
+.wheelChair:hover::before {
+    content: 'A';
+}
+.github::before {
+   content: 'g';
+}
+.github:hover::before {
+    content: 'G';
+}
+
+
+@media only screen and (max-width: 1032px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'header header'
+        'main1 main1'
+        'main2 main2'
+        'main3 main3'
+        'footer1 footer1'
+        'footer2 footer2'
+        'side1 side1'
+        'side2 side2';
+    }
+    
+
+
+    
+}
+    
+
+
+
+

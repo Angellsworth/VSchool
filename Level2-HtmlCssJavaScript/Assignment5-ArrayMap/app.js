@@ -1,20 +1,20 @@
 // 1) Make an array of numbers that are doubles of the first array
-// const arr = [2, 5, 100]
+// // const arr = [2, 5, 100]
 
-/*original return method*/
-// const doubleNumbers = arr.map(function (num){
-//     return num * 2 
-//   })
-//   /* es6 fat arrow code*/
-//   const doubleNumbers = arr.map(num => num * 2)
-//   console.log(doubleNumbers); // [4, 10, 200]
+// /*original return method*/
+// // const doubleNumbers = arr.map(function (num){
+// //     return num * 2 
+// //   })
+// //   /* es6 fat arrow code*/
+// //   const doubleNumbers = arr.map(num => num * 2)
+// //   console.log(doubleNumbers); // [4, 10, 200]
 
-//   /*2) Take an array of numbers and make them strings*/
-//   function stringItUp(arr){
-//       let stringArray = arr.map(String)
-//       return stringArray
-//   } 
-//   console.log(stringItUp([2, 5, 100])); // ["2", "5", "100"]
+// //   /*2) Take an array of numbers and make them strings*/
+// //   function stringItUp(arr){
+// //       let stringArray = arr.map(String)
+// //       return stringArray
+// //   } 
+// //   console.log(stringItUp([2, 5, 100])); // ["2", "5", "100"]
   
 
 //   3) Capitalize the first letter of each name and make the rest of the characters lowercase
