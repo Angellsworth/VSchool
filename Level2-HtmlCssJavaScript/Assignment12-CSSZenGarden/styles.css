@@ -101,10 +101,10 @@ p {
 .headerLeft {
     display: flex;
     width: 70%;
-
 }
 
 .headerMain {
+    /* position: relative; */
     display: flex;
       background-color: rgba(249, 252, 252);
       grid-area: header;
@@ -132,11 +132,13 @@ p {
 }
 
 .headerSide {
-      color: #BAC8C7;
-      display: flex;
-      align-items: center;
-      margin-right: 40px;
-  }
+    
+    color: #BAC8C7;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
 .main1 {
       background-color: #ffffff;
       grid-area: main1;
@@ -280,7 +282,7 @@ p {
 }
 
 .linkContainerSide2:last-child {
-    border-bottom: solid 1px #a0b9ad;;
+    border-bottom: solid 1px #a0b9ad;
 }
 
 .main3 {
@@ -388,24 +390,484 @@ p {
 }
 
 
-@media only screen and (max-width: 1032px) {
+/* teeny mobile */
+@media only screen and (max-width: 500px){
+        .container{
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 250px 950px 750px 850px 200px 120px;
+            grid-template-areas: 
+            'header '
+            'main1 '
+            'main2 '
+            'main3 '
+            'footer1 '
+            'footer2 '
+            'side1'
+            'side2';
+        }
+        
+        img {
+            height: 50px;
+            width: 50px;   
+            margin: 20px 20px 0px 15px; 
+            padding: 0px 0px 0px 0px; 
+         }
+         .headerLeft {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .headerMain {
+            display: block;
+            font-size: 13.5px;
+            margin: 0;
+          }
+        h1{
+            font-size: 28px;
+            margin: 0;
+            padding: 10px;
+        }
+        h2 {
+            padding: 5px 0 0 0;
+            font-size: 17px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+          .headerSide {
+            margin-right: 0;
+    
+          }
+          .headerButton {
+              display: block;
+            height: 70px;
+            width: 100%;
+            margin: 0;
+            padding-left: 70px;
+            font-size: 16px;
+        }
+        
+        a.arrow.headerButton {
+            margin: 0;
+            width: 70px;
+            padding: 0;
+    
+        }
+    
+        p {
+            margin: .75em 0
+        }
+          .main1 {
+            font-size: 13px;   
+            margin: 0px 0px;  
+            padding: 22px 50px;
+    
+        }
+        .hideMain1Text{
+            display: none;
+        }
+        .main1Link {
+            display: none;
+    
+        }
+        .main2 {
+            font-size: 13px;
+            margin: 0px 0px;  
+            padding: 22px 50px;
+        }
+        .main3 {
+            font-size: 13px;
+            margin: 0px 0px;  
+            padding: 22px 50px;
+        }
+        intro {
+            font-size: 20px;
+        }
+        .foot1notes {
+            font-size:22.4px;
+            /* padding-top: 10px; */
+            margin: 0;
+            
+        }
+      
+      .foot1link {
+            font-size: 22.4px;
+            margin: 0;
+        }
+        .footer1 {
+            font-size: 22.4px; 
+            padding: 44px 36px;
+            line-height: 1.6;
+            margin: 0;
+            
+        }
+        .footer2 {
+            font-size: 45px;
+            padding-top: 35px;
+        }
+        .footer2 a {
+            padding: 5px;
+            margin: 0 17px;
+        }
+        .side1 {
+            font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0px;
+        }
+        p.linkContainer {
+            margin: 0 0 0 0;
+            padding-left: 12%;
+            width: 50%;
+    
+        }
+        .sideBar1Link {
+            font-size: 16px;
+            padding: 0px;
+            
+        }
+        .sideBar1Link.name {
+            font-size: 12px;
+            margin: 0px;
+    
+        }
+        .linkContainerSide2 {
+            width: 50%;
+            margin: 0px;
+            padding: 20px 0px 20px 12%;
+            
+        }
+        .side2 {
+            padding-top: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .linkContainerSide2:last-child {
+            width: 100%;
+        }
+        a.sideBar2Link {
+          font-size: 16px; 
+          
+        }
+    }
+
+
+
+/* mobile */
+@media only screen and (min-width: 501px) and (max-width: 600px) {
     .container{
-        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 900px 750px 800px 200px 130px;
         grid-template-areas: 
-        'header header'
-        'main1 main1'
-        'main2 main2'
-        'main3 main3'
-        'footer1 footer1'
-        'footer2 footer2'
-        'side1 side1'
-        'side2 side2';
+        'header '
+        'main1 '
+        'main2 '
+        'main3 '
+        'footer1 '
+        'footer2 '
+        'side1'
+        'side2';
     }
     
+    img {
+        height: 50px;
+        width: 50px;   
+        margin: 65px 20px 0px 0px; 
+        padding: 0px 0px 0px 0px; 
+     }
+     .headerLeft {
+        width: 100%;
+        justify-content: center;
+    }
 
+    .headerMain {
+        display: block;
+        font-size: 13.5px;
+        margin: 0;
+      }
+    h1{
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 17px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+      .headerSide {
+        margin-right: 0;
 
+      }
+      .headerButton {
+          display: block;
+        height: 70px;
+        width: 100%;
+        margin: 0;
+        padding-left: 70px;
+        font-size: 16px;
+    }
     
+    a.arrow.headerButton {
+        margin: 0;
+        width: 70px;
+        padding: 0;
+
+    }
+
+    p {
+        margin: .75em 0
+    }
+      .main1 {
+        font-size: 13px;   
+        padding-top: 20px;  
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-bottom: 30px;
+    }
+    .hideMain1Text{
+        display: none;
+    }
+    .main1Link {
+        display: none;
+
+    }
+    .main2 {
+        font-size: 13px;
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-bottom: 30px;
+    }
+    .main3 {
+        font-size: 13px;
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-bottom: 30px;
+    }
+    intro {
+        font-size: 20px;
+    }
+    .foot1notes {
+        font-size:22.4px;
+        /* padding-top: 10px; */
+        margin: 0;
+        
+    }
+  
+  .foot1link {
+        font-size: 22.4px;
+        margin: 0;
+    }
+    .footer1 {
+        font-size: 22.4px; 
+        padding: 44px 36px;
+        line-height: 1.6;
+        margin: 0;
+        
+    }
+      .footer2 {
+        font-size: 48px;
+        padding-top: 30px;
+    }
+    .footer2 a {
+        padding: 5px;
+        margin: 0 17px;
+    }
+    .side1 {
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0px;
+    }
+    p.linkContainer {
+        margin: 0 0 0 0;
+        padding-left: 12%;
+        width: 50%;
+
+    }
+    .sideBar1Link {
+        font-size: 16px;
+        padding: 0px;
+        
+    }
+    .sideBar1Link.name {
+        font-size: 12px;
+        margin: 0px;
+
+    }
+    .linkContainerSide2 {
+        width: 50%;
+        margin: 0px;
+        padding: 20px 0px 20px 12%;
+        
+    }
+    .side2 {
+        padding-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .linkContainerSide2:last-child {
+        width: 100%;
+    }
+    a.sideBar2Link {
+      font-size: 16px; 
+      
+    }
 }
+
+/* tablet */
+@media only screen and (min-width: 601px) and (max-width: 1032px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 270px 750px 500px 550px 180px 130px;
+        grid-template-areas: 
+        'header '
+        'main1 '
+        'main2 '
+        'main3 '
+        'footer1 '
+        'footer2 '
+        'side1'
+        'side2';
+    }
+    
+    img {
+        height: 80px;
+        width: 80px;   
+        margin: 50px 20px 0px 0px; 
+        padding: 0px 0px 0px 0px; 
+     }
+     .headerLeft {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .headerMain {
+        display: block;
+        font-size: 13.5px;
+        margin: 0;
+      }
+    
+    h2 {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+      .headerSide {
+        margin-right: 0;
+
+      }
+      .headerButton {
+          display: block;
+        height: 70px;
+        width: 100%;
+        margin: 0;
+        font-size: 1.2em;
+    }
+    
+    .arrow {
+        margin: 0;
+        width: 70px;
+    }
+
+    p {
+        margin: .75em 0
+    }
+      .main1 {
+        font-size: 13.4px;     
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-bottom: 30px;
+
+
+    }
+    .main2 {
+        font-size: 13px;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-bottom: 30px;
+    }
+    .main3 {
+        font-size: 13px;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-bottom: 30px;
+    }
+    intro {
+        font-size: 20px;
+    }
+    .foot1notes {
+        font-size:22.4px;
+        padding-top: 10px;
+        
+    }
+  
+  .foot1link {
+        font-size: 22.4px;
+        
+    }
+      .footer1 {
+        font-size: 22.4px; 
+        padding: 17px;
+        line-height: 1.6;
+    }
+      .footer2 {
+        font-size: 48px;
+        padding-top: 30px;
+    }
+    .footer2 a {
+        padding: 5px;
+        margin: 0 17px;
+    }
+    .side1 {
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0px;
+    }
+    p.linkContainer {
+        margin: 0 0 0 0;
+        padding-left: 12%;
+        width: 50%;
+
+    }
+    .sideBar1Link {
+        font-size: 16px;
+        padding: 0px;
+        
+    }
+    .sideBar1Link.name {
+        font-size: 12px;
+        margin: 0px;
+
+    }
+    .linkContainerSide2 {
+        width: 50%;
+        margin: 0px;
+        padding: 20px 0px 20px 12%;
+        
+    }
+    .side2 {
+        padding-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .linkContainerSide2:last-child {
+        width: 100%;
+    }
+    a.sideBar2Link {
+      font-size: 16px; 
+      
+    }
+}
+
+
+
     
 
 

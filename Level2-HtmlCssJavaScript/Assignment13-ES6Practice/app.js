@@ -12,7 +12,7 @@
 const name = "John"
 const age = 101
 
-function runForLoop(pets) {
+const runForLoop = (pets) => {
     let petObjects = []
     for (let i = 0; i < pets.length; i++) {
         let pet = { type: pets[i] }
@@ -43,15 +43,14 @@ runForLoop(["cat", "dog"])
 
 const carrots = ["bright orange", "ripe", "rotten"]
 
-function mapVegetables(arr) {
-    return arr.map((carrot) => type: "carrot", name: carrot)
+const mapVegetables = arr => {
+    return arr.map (carrot => ({type: "carrot", name: carrot}))
 }
-console.log(carrots)
+console.log(mapVegetables(carrots))
 
 // ### **Task 2**
 
 // Re-write this `.filter()` ’s callback function using an arrow function:
-
 
 const people = [
     {
@@ -72,7 +71,93 @@ const people = [
     }
 ]
 
-function filterForFriendly(arr) {
+const filterForFriendly=(arr) => {
     return arr.filter((person) => person.friendly)
 }
-console.log(friendly)
+console.log(filterForFriendly(people))
+
+// ********### **Task 3**
+
+// Re-write the following functions to be arrow functions:
+// function doMathSum(a, b) {
+//     return a + b
+// }
+
+// var produceProduct = function(a, b) {
+//     return a * b
+// }
+
+let doMathSum = (a, b) => {
+    const result = a + b
+    return result
+}
+
+console.log(doMathSum(4, 6))
+
+
+let produceProduct = (a, b) => a * b
+
+console.log(produceProduct(7, 8))
+
+
+// ### **Task 4**
+
+// Write a `printString` function that takes `firstName`, `lastName`, and `age` as 
+// parameters and returns a string like the following:
+
+let person = {
+    firstName:'Jane',
+    lastName: 'Doe',
+    age: '100'
+}
+
+let printString = ({firstName, lastName, age}) => `Hi, ${firstName} ${lastName}, how does it feel to be ${age}?`
+
+console.log(printString(person))
+
+
+// ```
+// Hi Kat Stark, how does it feel to be 40?
+
+// ```
+
+// `firstName` should default to `"Jane"lastName` should default to `"Doe"age` should default to `100`
+
+const animals = [
+    {
+        type: "dog",
+        name: "theodore"
+    },
+    {
+        type: "cat",
+        name: "whiskers"
+    },
+    {
+        type: "pig",
+        name: "piglette"
+    },
+    {
+        type: "dog",
+        name: "sparky"
+    }
+ ];
+ 
+ let filterForDogs = (arr) => {
+     return arr.filter(animal => {
+         if (animal.type === "dog") {
+             return true
+         } else {
+             return false
+         }
+     })
+ }
+ console.log(filterForDogs(animals))
+
+ let tourist = {
+    firstName:'Janice',
+    location: 'Hawaii',
+}
+
+let welcomeLetter = ({firstName, location}) => `Hi ${firstName}! \nWelcome to ${location}. \nI hope you enjoy your stay. Please ask the president of ${location} if you need anything.`
+
+console.log(welcomeLetter(tourist))

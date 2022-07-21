@@ -1,0 +1,154 @@
+{
+    "name": "JSON's Deli",
+    "Appetizers": [
+        {
+            "name": "Chips",
+            "ingredients": [
+                "potatoes",
+                "oil",
+                "salt"
+            ],
+            "description": "Sliced and super fried potatoes"
+        },
+        {
+            "name": "Fries",
+            "ingredients": [
+                "potatoes",
+                "oil",
+                "salt"
+            ],
+            "description": "Wedges of fried potatoes"
+        },
+        {
+            "name": "Bread",
+            "ingredients": [
+                "flour",
+                "water",
+                "salt",
+                "yeast"
+            ],
+            "description": "Crusty, yummy, warm bread"
+        }
+    ],
+    "Cold sandwiches": [
+        {
+            "name": "Roasted Red Pepper Sandwich",
+            "ingredients": [
+                "salami",
+                "mozzarella",
+                "red peppers"
+            ],
+            "description": "Italian mozzarella sandwich"
+        },
+        {
+            "name": "Tuna Salad Sandwich",
+            "ingredients": [
+                "tuna",
+                "mayo",
+                "onions",
+                "bread"
+            ],
+            "description": "Fresh tuna on white bread"
+        },
+        {
+            "name": "Turkey Club Sandwich",
+            "ingredients": [
+                "turkey",
+                "bacon",
+                "tomatoes",
+                "cranberry sauce",
+                "mayo",
+                "bread"
+            ],
+            "description": "A taste of Thanksgiving at anytime"
+        }
+    ],
+    "Hot sandwiches": [
+        {
+            "name": "Grilled Cheese",
+            "ingredients": [
+                "cheese",
+                "herbed-butter",
+                "bread"
+            ],
+            "description": "Classic grilled cheese"
+        },
+        {
+            "name": "Chicken and Waffle Sandwich",
+            "ingredients": [
+                "waffle",
+                "fried chicken",
+                "egg",
+                "cheese"
+            ],
+            "description": "Breakfast or lunch or dinner all in one"
+        },
+        {
+            "name": "B,A,L,T sandwich",
+            "ingredients": [
+                "bacon",
+                "avocado",
+                "lettuce",
+                "tomato"
+            ],
+            "description": "A BLT with the excitement of avocado"
+        }
+    ],
+    "Desserts": [
+        {
+            "name": "Chocolate chip cookie",
+            "ingredients": [
+                "chocolate chip",
+                "cookie"
+            ],
+            "description": "Freshly baked chocolate chip cookie"
+        },
+        {
+            "name": "All Fool's Chocolate cake",
+            "ingredients": [
+                "chocolate",
+                "cake"
+            ],
+            "description": "Family recipe of Chocolate cake"
+        },
+        {
+            "name": "Pumpkin pie",
+            "ingredients": [
+                "crust",
+                "sugar",
+                "butter",
+                "pumpkin"
+            ],
+            "description": "An american favorite"
+        }
+    ],
+    "Drinks": [
+        {
+            "name": "Lemonade",
+            "ingredients": [
+                "lemons",
+                "water"
+            ],
+            "description": "Freshly squeezed lemonade"
+        },
+        {
+            "name": "Strawberry Lemonade",
+            "ingredients": [
+                "strawberries",
+                "lemons",
+                "water"
+            ],
+            "description": "Homemade strawberry lemonade"
+        },
+        {
+            "name": "Sparkling Mint Limeade",
+            "ingredients": [
+                "lime",
+                "mint leaves",
+                "sugar",
+                "sparkling water"
+            ],
+            "description": "Cool and refreshing Limeade"
+        }
+    ]
+}

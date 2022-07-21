@@ -20,13 +20,13 @@ function createLi() {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
   if (input.value === "") {
     alert("Enter Item Please");
   } else {
     const li = createLi();
     ul.appendChild(li);
   }
+  document.querySelector("input").value=""
 });
 
 ul.addEventListener("click", (event) => {
