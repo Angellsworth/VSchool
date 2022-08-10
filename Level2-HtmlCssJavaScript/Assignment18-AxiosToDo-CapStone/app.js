@@ -124,8 +124,9 @@ function createToDoElements (todoItems) {
                 })
                 .then(response => {
                     console.log("The edit/Save is being attempted")
-                    img.src = imgUrlTextBox.value
-                    h3.textContent = titleTextBox.value 
+                    console.log(response.data)
+                    img.src = response.data.imgUrl
+                    h3.textContent = response.data.title
                     titleTextBox.className = "hidden"
                     imgUrlTextBox.className = "hidden"
                     saveButton.className = "hidden"

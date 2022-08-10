@@ -29,11 +29,13 @@ class Hero {
         } 
 
     }
+    //move endgame outside of class
     endGame() {
         this.gameActive = false;
         console.log(`\n ${this.name} Died, \n Game Over `);
         clearInterval(runTime);
     }
+
     gotPowerUp(){
         this.hasStar = false
         if(this.status === 'dead'){
@@ -58,7 +60,7 @@ class Hero {
     }
 }
 
-const player = new Hero (names, 0, 'Big', false)
+const player = new Hero (names, 0, 'small', false)
 // player.setName(getRandomName)
 player.setName(getRandomName())
 // console.log(getRandomName());
@@ -67,6 +69,9 @@ let runTime = setInterval(() => {
     player.print();
     let randomEvent = Math.floor((Math.random() * 3));
     console.log(`Random Event(s): ${randomEvent}`)
+    if (player.status === "dead"){
+        player.endGame()
+    }
     if (randomEvent === 0) {
         player.gotHit();
     } else if (randomEvent === 1) {
