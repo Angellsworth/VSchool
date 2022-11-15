@@ -1,0 +1,83 @@
+body {
+  margin:auto;
+  height: 704px;
+  width: 550px;
+} 
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  background-color:#F55A5A;
+  color: white;
+}
+img {
+  height: 24px;
+  width: 24px;
+}
+.title {
+  padding: 7px;
+  font-size: 16px;
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  height: 168px;
+  width: 470px;
+  padding-top: 100px;
+  padding-left: 40px;
+}
+
+.cardImage {
+  height: 168px;
+  width: 125px;
+  border-radius: 5px;
+}
+.cardInfo {
+  height: 144px;
+  width: 325px;
+  padding-left: 20px;
+}
+.locationIcon {
+  width: 7px;
+  height: 10px;
+  fill: #F55A5A;
+  
+}
+.countryLocation {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  padding-left: 4px;
+}
+.locationLink {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  padding-left: 12px;
+  color: #918E9B;
+  /* text-decoration: none; */
+}
+.actualPlace {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  
+}
+.dates {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  
+}
+.description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  
+}

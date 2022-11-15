@@ -1,0 +1,100 @@
+/* 
+font-family: 'Gayathri', sans-serif;
+font-family: 'Ubuntu', sans-serif; 
+font-family: 'Caveat Brush', cursive;
+font-family: 'Handlee', cursive;
+*/
+
+.App {
+  text-align: center;
+  
+}
+body {
+  background-color: #afcff1;
+}
+
+.nav {
+  background-color: #518CCC;
+  font-family: 'Gayathri', sans-serif;
+  border-top: 5px dashed black;
+  border-bottom: 5px dashed black;
+  margin-bottom: 0px;
+  padding: 40px;
+}
+.friendTitle {
+  font-style: italic;
+  font-family: 'Handlee', cursive;
+  font-size: 80px;
+  color: whitesmoke;
+}
+.dotRed {
+  letter-spacing: 1px;
+  height: 5px;
+  width: 5px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
+  
+}
+.dotBlue {
+  height: 5px;
+  width: 5px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
+  
+}
+.dotYellow {
+  height: 5px;
+  width: 5px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.friendTitle2 {
+  font-size: 20px;
+  color:rgb(199, 196, 196);
+}
+
+.friendCard {
+  background-color: #f7eef294;
+  float: left;
+  text-align: justify;
+  padding-left: 25px;
+  padding-right: 20px;
+  font-family: 'Gayathri', sans-serif;
+  font-size: 12px;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 2px 3px rgb(191, 191, 196);
+  width: 275px;
+  margin: 15px;
+}
+.cardImage {
+  width: 275px;
+  padding-top: 20px;
+  
+
+}
+
+.dotPet {
+  letter-spacing: 1px;
+  height: 5px;
+  width: 5px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 3px;;
+  
+}
+

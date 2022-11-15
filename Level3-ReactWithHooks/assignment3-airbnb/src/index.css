@@ -1,0 +1,103 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    height: 853px;
+    width: 650px;
+  }
+
+  .grey {
+      color: #918e9b
+  }
+  /* Navbar Styling */
+  nav {
+    /* display: flex;
+    align-items: center; */
+    height: 70px;
+    width: 650px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  }
+  .airLogo {
+    max-width: 100px;
+    max-height: 26px;
+  }
+  
+  /* Hero Styling */
+  
+  section {
+    padding: 20px;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* img {
+    border-radius: 9px;
+  } */
+  .hero--photo {
+    max-width: 400px;
+    align-self: center;
+   
+  }
+  
+  .hero--header {
+    margin-bottom: 16px;
+    font-size: 36px;
+  
+  }
+  
+  .hero--text {
+    margin-top: 0;
+    font-size: 15px;
+    /* padding-right: 150px; */
+    text-align: left;
+  }
+  .card {
+      float: left;
+      margin: 20px;
+      width: 175px;
+      height: 235px;
+      font-size: 12 px;
+      flex-basis: 225px;
+      border-radius: 9px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      position: relative;
+  }
+
+  .card--image {
+      width: 175px;
+      height: 235px;
+      border-radius: 9px;
+  }
+
+  .card--stats {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+  }
+  .star {
+      height: 14px;
+      padding-right: 5px;
+
+  }
+  .bold {
+      font-weight: bold;
+  }
+  p {
+      font-size: 18px;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
+}

@@ -1,0 +1,137 @@
+.App {
+  align-content: center;
+  
+  
+}
+
+header {
+  font-family: 'Chicle', cursive;
+  background-image: linear-gradient(to bottom,#de0000df,#e19200af);
+  color: rgba(255, 255, 255, 0.835);
+  text-align: center;
+  height: 150px;
+  width: auto;
+  border: 4px solid #720606ab;
+  border-style: inset;
+  font-family: 'Bungee Spice', cursive;
+  font-size: 35px;
+
+}
+body {
+  background-color: #160503;
+  background-image: url("disco.avif");
+}
+
+.gridContainer {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 20px;
+  margin-top: 60px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+}
+.square {
+  margin: 0 auto;
+  border: 3px solid #720606ab;
+  height: 300px;
+  width: 400px;
+  /* margin-left: 30px; */
+}
+
+.magicButton {
+  padding-top: 60px;
+  margin-right: auto;
+  margin-left: 143px;
+}
+button {
+  background-color: #e18b00;
+  border: 2px solid black;
+  width: 350px;
+  height: 50px;
+  margin: 20px 20px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #8D3312;
+}
+/* .songButton {
+  margin-left: 40px;
+  width: 300px;
+  height: 50px;
+
+} */
+
+
+
+
+
+
+
+
+
+/* 
+
+.white{
+  background-color: white;
+}
+.black{
+  background-color: black;
+}
+.purple{
+  background-color: purple;
+}
+.blue{
+  background-color: blue;
+}
+.big-dj-one{
+background-image:linear-gradient(red, white);
+
+transition:transform 2s;
+transform:rotate(360deg)
+}
+.big-dj-two{
+  background-image:linear-gradient(green, orange);
+
+  transition:transform 2s;
+  transform:rotate(360deg)
+}
+.big-dj-three{
+  background-image:linear-gradient(pink, yellow);
+  transition:transform 2s;
+ transform:rotate(360deg)
+}
+.big-dj-four{
+  background-image:linear-gradient(brown, blue);
+  transition:transform 2s;
+  transform:rotate(360deg)
+}
+
+
+
+
+
+.App{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 300px 300px;
+  gap:10px;
+}
+
+div.App>div{
+border: 1px solid black;
+}
+.button-div{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: auto;
+  gap:10px;
+}
+
+.button-div>button{
+font-weight: bold; }
+*/

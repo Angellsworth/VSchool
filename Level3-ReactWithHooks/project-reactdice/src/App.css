@@ -1,0 +1,62 @@
+/* .App {
+  text-align: center;
+} */
+.header {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 0px;
+  padding-bottom:30px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 75px;
+  color:#ce1e1e;
+  text-shadow: 3px 3px #524c4cb9;
+  border-bottom: 8px dotted black;
+  
+
+}
+
+body {
+  background-image: url("diceBackground.jpeg");
+  background-size: cover;
+}
+
+.diceContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 100px 500px 20px 30px;
+}
+
+.Die {
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  border: 2px solid black;
+  box-shadow: 3px 7px rgba(47, 46, 46, 0.883);
+  border-radius: 25px;
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+
+}
+button {
+  margin-left: 290px;
+  height:50px;
+  background-color:	#ce1e1e;
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: bolder;
+  border-radius: 10px;
+  border: 2px solid #581212e0;
+  box-shadow: 3px 7px #58121293;
+}
+.footer {
+  
+  margin-top: 300px;
+  margin-right: 100px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  text-align: end;
+}

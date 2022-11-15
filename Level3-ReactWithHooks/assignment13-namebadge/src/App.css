@@ -1,0 +1,60 @@
+form {
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 300px;
+  width: 1250px;
+  margin: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25px 25px 25px 100px 50px;
+  padding: 30px 50px;
+  gap: 25px;
+}
+
+.aboutYourself {
+  grid-column: 1/-1;
+}
+
+button {
+  grid-column: 1/-1;
+  margin-left: 540px;
+  margin-right: 540px;
+  border-radius: 8px;
+  height: 25px;
+  width:150px;
+}
+
+.badgeContainer {
+  border: 2px solid grey;
+  border-radius: 8px;
+  height: 300px;
+  width: 1250px;
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25px 25px 25px 25px 50px;
+  gap: 25px;
+}
+
+.badgeHeader {
+  background-color: grey;
+  color: white;
+  grid-column: 1/-1;
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+.badgeItem {
+  margin: 0px 25px 25px 25px;
+}
+
+.aboutYourself {
+  grid-column: 1/-1;
+  height: 90px;
+  border: 1px solid black;
+  margin: 0px 25px 20px 25px;
+  padding: 10px;
+}
+
+

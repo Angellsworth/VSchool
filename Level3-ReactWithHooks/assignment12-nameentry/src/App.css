@@ -1,0 +1,81 @@
+/* 
+font-family: 'Antic Didone', serif;
+font-family: 'Open Sans', sans-serif; 
+*/
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80");
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+  background-position: center;
+  background-size: cover;
+  background-color: #180a01d0;
+}
+.header {
+  font-family: 'Antic Didone', serif;
+  height:130px;
+  width: 1000px;
+  margin-left: 210px;
+  background-color: #180a01d0;
+  border: 3px solid #180A01;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 80px;
+  color: #81644b;
+}
+h2 {
+  font-size: 25px;
+}
+input {
+  font-size: 20px;
+  background-color: #dfc7b3;
+  border: 1px solid #332c27;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+select {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif; 
+  color: #757575;
+  background-color: #dfc7b3;
+  border: 1px solid #332c27;
+  width: 30%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+button {
+  font-size: 20px;
+  color: #dfc7b3;
+  font-family: 'Antic Didone', serif;
+  background-color: #312015;
+  border: 1px solid #030100;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+form {
+  text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+  color: whitesmoke;
+  font-size:x-large;
+  font-family: 'Open Sans', sans-serif; 
+}
+
+h1{
+  color: #dfc7b3;
+  font-family: 'Antic Didone', serif;
+
+}
+
+
+
