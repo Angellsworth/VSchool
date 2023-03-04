@@ -3,9 +3,11 @@ const input = document.querySelector("input");
 const ul = document.querySelector("#shoppingList");
 
 function createLi() {
+
   const li = document.createElement("li");
   const span = document.createElement("span");
   span.textContent = input.value;
+  
   const editBtn = document.createElement("button");
   editBtn.textContent = "edit";
   const removeBtn = document.createElement("button");

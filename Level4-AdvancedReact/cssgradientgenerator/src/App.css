@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Comfortaa';
+  background-color:honeydew;
+
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  border:black;
+  margin-top: 30px;
+  padding: 20px;
+  width:75%;
+  color: rgb(20, 20, 20);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-shadow: 2px 8px 17px -10px rgba(0,0,0,0.46);
+  -webkit-box-shadow: 2px 8px 17px -10px rgba(0,0,0,0.46);
+  -moz-box-shadow: 2px 8px 17px -10px rgba(0,0,0,0.46);
+  height: 55vh;
+}
+h1 {
+  margin: auto;
+  font-size: 2.5rem;
+}
+/* .generator {
+  
+} */
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  font-size: larger;
+  border-radius: 100%;
+}
+/* .color1 {
+  background-color: rgb(180, 189, 236);
+}
+.color2 {
+  background-color: rgb(137, 95, 204);
+}
+.color3 {
+  background-color: rgb(218, 77, 131);
+} */
+label {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+colorPicker {
+  width: 70px;
+}
+
+textarea {
+  width: 350px;
+  height: 125px;
+}
+hr {
+  margin: 15px;
+}
+.textareaHr {
+  margin-bottom: 20px;
+}
+
+
