@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-router-dom": "^6.10.0",
     "readline-sync": "^1.4.10"
   }
 }

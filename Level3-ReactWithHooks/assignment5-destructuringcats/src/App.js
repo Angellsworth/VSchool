@@ -33,7 +33,7 @@ function App() {
                 img={Kween}
                 name="Kween"
                 phone="(800) CATDIVA"
-                email="kabo@scrimba.com"
+                email="kween@scrimba.com"
             />
 
       

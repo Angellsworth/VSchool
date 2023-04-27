@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background-color: #F7F4F6;
+}
+.header {
+  padding-top: 20px;
+}
+.App {
+  /* padding: 10px; */
+  background-color: #5AAFC4;
+  color: whitesmoke;
+  height: 150px;
+}
+Links {
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.mainSection {
+  margin-top: 10px;
+  padding-top: 100px;
+  background-color: #3c9468;
+  color: whitesmoke;
+  height: 400px;
+  width:100%;
+}
+
+.footerSection {
+  background-color: #24678E;
+  color: whitesmoke;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
