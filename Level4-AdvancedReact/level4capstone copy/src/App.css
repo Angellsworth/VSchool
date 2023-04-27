@@ -1,0 +1,397 @@
+body{
+  background-color: #adb4c1;
+  font-family: 'Righteous', cursive;
+  /* display: flex;
+  flex-direction: column; */
+}
+/* App.js classNames */
+nav{
+  text-align: end;
+  padding-right: 6.25rem;
+}
+.header {
+  padding-top: 1.25rem;
+  color:black;
+}
+.App {
+  background-color: #839CC7;
+  border: .125rem solid #2e3849;
+  border-radius: .188rem;
+  box-shadow: 0 .188rem .188rem -0.063rem rgba(46,56,73);
+  width: 100%;
+  color: black;
+  height: 6.875rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.headerImage{
+  width: 6.26rem;
+  margin-right: .438rem;
+  float: left;
+  padding-left: .938rem;
+}
+.headerTitle{
+  padding-top: .938rem;
+  font-size: 1.563rem;
+  margin-right: auto;
+  font-weight: 800;
+  margin: 0;
+}
+.headerProject {
+  font-size: .938rem;
+  font-weight: 600;
+  margin: 0;
+}
+.links {
+  margin-left: 1.875rem;
+  font-size: 1.25rem;
+  padding-bottom: 10px;
+  color:black;
+  text-decoration: none;
+}
+
+/* Home.js classNames */
+main{
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 100px;
+  color: black;
+  height:900px;
+  width:100%;
+}
+.homePageParagraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 150;
+  margin-left: 185px;
+  margin-right: 185px;
+}
+.backgroundImage{
+  margin: 1.25rem 90px 0px 70px ;
+  background-size: auto;
+  width: 70%;
+  background-repeat: no-repeat;
+}
+
+/* NasaPhoto.js */
+.photoOfTheDay {
+  text-align: center;
+  margin: 50px;
+}
+.APODPageDescription {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 150;
+  margin-left: 185px;
+  margin-right: 185px;
+}
+.photoTitle{
+  font-family: 'Righteous', cursive;
+  font-size: 35px;
+}
+.photoDate{
+  font-family: 'Righteous', cursive;
+}
+.photoExplanation{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-left: 4.375rem;
+  margin-right: 4.375rem;
+}
+/* Search.js */
+/* main{
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 100px;
+  color: black;
+  height:900px;
+  width:100%;
+} */
+.roversImageTitleContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 5.625rem;
+}
+.RoverMainImg {
+  margin: 10px.625rem;
+  width: 18.75rem;
+  height: 18.75rem;
+  margin-bottom: 1.875rem;
+  margin-top: .625rem;
+}
+.roverName {
+  margin-top: -1.25rem;
+}
+.searchPageDescription {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-left: 11.563rem;
+  margin-right: 11.563rem;
+}
+.roverImageContainer{
+  text-align: center;
+  margin-top: .625rem;
+  padding-top: 6.25rem;
+  color: black;
+  width:100%;
+}
+.marsRoverImage{
+  text-align: center;
+  margin: 3.125rem;
+  height:fit-content;
+}
+h1 {
+  margin-top:.625rem;
+  margin-bottom: 1.875rem;
+}
+input{
+  margin: .625rem;
+  font-size: 1.125rem;
+  font-family: 'Righteous', cursive;
+}
+label {
+  margin: .625rem;
+  font-size: 1.125rem;
+  font-family: 'Righteous', cursive;
+}
+select {
+  margin-left: .635rem;
+  font-size: 1.125rem;
+  font-family: 'Righteous', cursive;
+}
+button{
+  background-color: #839CC7;
+  color: black;
+  padding: .188rem;
+  width: 6rem;
+  font-size: 1.125rem;
+  font-family: 'Righteous', cursive;
+}
+.roverPhoto {
+  width:31.25rem;
+}
+/* footer?? */
+.footerSection {
+  position: fixed;
+  background-color: #839CC7;
+  border:.125rem solid #2e3849;
+  box-shadow: 0 -.125rem .188rem 0 rgba(46,56,73);
+  color: black;
+  height: 1.25rem;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* make it responsive */
+/*<600px, 601px, 768px, 992px, 1200px */
+@media only screen and (max-width: 600px) {
+  nav{
+    margin-top: 10px;
+    margin-right:75px;
+    padding:0px;
+  }
+  .header {
+    padding-top: 1.25rem;
+    color:black;
+  }
+  .App {
+    width:auto;
+    height: 10%
+  }
+  .headerImage{
+    width: 50px;
+    padding-top: 10px;
+  
+  }
+  .headerTitle{
+    padding-top: 12px;
+    font-size: 15px;
+  }
+  .headerProject {
+    font-size: 12px;
+  }
+  .links {
+   margin: 0px;
+    font-size: 10px;
+    padding-bottom: 10px;
+    color:black;
+    text-decoration: none;
+  }
+  /* Home.js classNames */
+main{
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 50px;
+  color: black;
+  height:600px;
+  width:100%;
+}
+.homeH1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.homePageParagraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 150;
+  margin: 10px 30px;
+}
+/* NasaPhoto.js */
+h1 {
+  font-size: 20px;
+  margin: 0px;
+}
+img {
+  width: 200px;
+}
+.photoOfTheDay {
+  text-align: center;
+  width: 70%;
+  height: 70%;
+}
+.APODPageDescription {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 150;
+  margin: 10px 0px;
+  
+}
+.nasaPhotoTitleExplanationContainer {
+  margin: 0px;
+}
+.photoTitle{
+  font-family: 'Righteous', cursive;
+  font-size: 14px;
+}
+.photoDate{
+  font-family: 'Righteous', cursive;
+  font-size: 12px;
+}
+.photoExplanation{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0px;
+}
+/* Search.js */
+.searchPageH1 {
+  margin: 10px;
+}
+.roversImageTitleContainer {
+  display: none;
+}
+.singleRoverImageTitleContaner {
+  display: none;
+}
+.RoverMainImg {
+  display: none
+  
+}
+.roverName {
+display: none;
+}
+.searchPageDescription {
+  font-size: 12px;
+  margin: 10px;
+  
+}
+.roverImageContainer{
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  color: black;
+  width:100%;
+}
+.marsRoverImage{
+  text-align: center;
+  margin: 10px;
+  height:fit-content;
+}
+.photoExplanation{
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+input{
+  max-width: fit-content;
+  margin:2px;
+  font-size: 12px;
+  font-family: 'Righteous', cursive;
+}
+label {
+  margin: .625rem;
+  font-size: 12px;
+  font-family: 'Righteous', cursive;
+}
+select {
+  max-width: 250px;
+  margin-left: .635rem;
+  font-size:12px;
+  font-family: 'Righteous', cursive;
+}
+
+button{
+  background-color: #839CC7;
+  color: black;
+  padding: 3px;
+  width: fit-content;
+  font-size: 12px;
+  font-family: 'Righteous', cursive;
+}
+.roverPhoto {
+  width:50%;
+}
+h5{
+  font-size: 10px;
+  margin:20px;
+}
+  
+}
+@media only screen and(min-width: 768px) {
+  /* NasaPhoto.js */
+h1 {
+  font-size: 20px;
+  margin: 0px;
+}
+img {
+  width: 200px;
+}
+.photoOfTheDay {
+  text-align: center;
+  width: 70%;
+  height: 70%;
+}
+.APODPageDescription {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 150;
+  margin: 10px 0px;
+  
+}
+.nasaPhotoTitleExplanationContainer {
+  margin: 0px;
+}
+.photoTitle{
+  font-family: 'Righteous', cursive;
+  font-size: 14px;
+}
+.photoDate{
+  font-family: 'Righteous', cursive;
+  font-size: 12px;
+}
+.photoExplanation{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0px;
+}
+}
+@media only screen and(min-width: 992px) {
+  
+}
