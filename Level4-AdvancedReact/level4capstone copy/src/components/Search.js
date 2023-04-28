@@ -8,7 +8,7 @@ import Perserverance from "./images/perserverance.jpeg";
 const MarsRover = () => {
   const [date, setDate] = useState("");
   const [image, setImage] = useState();
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Spirit");
   const [manifest, setManifest] = useState();
 
   const handleDateChange = (event) => {
@@ -23,9 +23,7 @@ const MarsRover = () => {
 
   const handleSearch = (event) => {
     const apiKey = process.env.REACT_APP_NASA_KEY;
-    const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${apiKey}`;
-
-    // `https://api.nasa.gov/mars-photos/api/v1/manifests/{rover_name}?api_key=${apiKey}`;
+    const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/photos?earth_date=${date}&api_key=${apiKey}`;
 
     axios
       .get(URL)
@@ -37,12 +35,11 @@ const MarsRover = () => {
       .catch((error) => {
         console.log(error);
       });
-    console.log(getManifestData());
   };
 
   const getManifestData = async () => {
     const apiKey = process.env.REACT_APP_NASA_KEY;
-    const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=${apiKey}&/manifests/curiosity`;
+    const URL = `https://api.nasa.gov/mars-photos/api/v1/manifests/${name}/latest_photos?api_key=${apiKey}`;
 
     const response = await axios
       .get(URL)
@@ -54,7 +51,6 @@ const MarsRover = () => {
       .catch((error) => {
         console.log(error);
       });
-    // const data = await res.json();
   };
 
   useEffect(() => {

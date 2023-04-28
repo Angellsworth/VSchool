@@ -243,7 +243,7 @@ main{
   font-weight: 150;
   margin: 10px 30px;
 }
-/* NasaPhoto.js */
+NasaPhoto.js
 h1 {
   font-size: 20px;
   margin: 0px;
@@ -280,7 +280,7 @@ img {
   font-weight: 400;
   margin: 0px;
 }
-/* Search.js */
+Search.js 
 .searchPageH1 {
   margin: 10px;
 }
@@ -350,47 +350,11 @@ button{
 h5{
   font-size: 10px;
   margin:20px;
-}
+} 
   
 }
 @media only screen and(min-width: 768px) {
-  /* NasaPhoto.js */
-h1 {
-  font-size: 20px;
-  margin: 0px;
-}
-img {
-  width: 200px;
-}
-.photoOfTheDay {
-  text-align: center;
-  width: 70%;
-  height: 70%;
-}
-.APODPageDescription {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 150;
-  margin: 10px 0px;
-  
-}
-.nasaPhotoTitleExplanationContainer {
-  margin: 0px;
-}
-.photoTitle{
-  font-family: 'Righteous', cursive;
-  font-size: 14px;
-}
-.photoDate{
-  font-family: 'Righteous', cursive;
-  font-size: 12px;
-}
-.photoExplanation{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  margin: 0px;
-}
+
 }
 @media only screen and(min-width: 992px) {
   
