@@ -3,7 +3,7 @@ import axios from "axios";
 import Spirit from "./images/Spirit.jpeg";
 import Opportunity from "./images/opportunity.jpeg";
 import Curiosity from "./images/curiosity.jpeg";
-import Perserverance from "./images/perserverance.jpeg";
+import Perseverance from "./images/perserverance.jpeg";
 
 const MarsRover = () => {
   const [date, setDate] = useState("");
@@ -82,7 +82,7 @@ const MarsRover = () => {
           <h3 className="roverName">Opportunity</h3>
         </div>
 
-        <div className="singleRoverImageTitleContaner">
+        <div className="singleRoverImageTitleContainer">
           <img
             className="RoverMainImg"
             src={Curiosity}
@@ -95,11 +95,11 @@ const MarsRover = () => {
         <div className="singleRoverImageTitleContaner">
           <img
             className="RoverMainImg"
-            src={Perserverance}
-            placeholder="Perserverance"
-            alt="Perserverance Rover"
+            src={Perseverance}
+            placeholder="Perseverance"
+            alt="Perseverance Rover"
           />
-          <h3 className="roverName">Perserverance</h3>
+          <h3 className="roverName">Perseverance</h3>
         </div>
       </div>
 
@@ -107,7 +107,7 @@ const MarsRover = () => {
         Looking for a fun way to explore more wonders of space? Look no further
         than NASA's Rover photos! With four different options to choose from,
         you can search through stunning images captured by the Spirit,
-        Opportunity, Curiosity, and Perserverance, rovers. But why stop there?
+        Opportunity, Curiosity, and Perseverance, rovers. But why stop there?
         Use our advanced search feature to filter through these images by date
         and uncover hidden gems that are out of this world! Whether you are a
         space enthusiast or just looking for a unique way to spend your time,
@@ -130,8 +130,8 @@ const MarsRover = () => {
           <option className="drpdown" value={"Curiosity"}>
             Curiosity: 08/05/2012 to Present
           </option>
-          <option className="drpdown" value={"Perserverance"}>
-            Perserverance: 02/08/2021 to Present
+          <option className="drpdown" value={"Perseverance"}>
+            Perseverance: 02/08/2021 to Present
           </option>
         </select>
       </label>
