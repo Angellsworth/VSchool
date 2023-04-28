@@ -62,43 +62,54 @@ const MarsRover = () => {
       <h1 className="searchPageH1">The Rovers of Mars</h1>
       <div className="roversImageTitleContainer">
         <div className="singleRoverImageTitleContaner">
-          <img
-            className="RoverMainImg"
-            src={Spirit}
-            placeholder="Spirit"
-            alt="Spirit Rover"
-            title="Spirit"
-          />
+          <a href="https://www.jpl.nasa.gov/missions/mars-exploration-rover-spirit-mer-spirit">
+            <img
+              className="RoverMainImg"
+              src={Spirit}
+              placeholder="Spirit"
+              alt="Spirit Rover"
+              title="Spirit"
+            />
+          </a>
+
           <h3 className="roverName">Spirit</h3>
         </div>
 
         <div className="singleRoverImageTitleContaner">
-          <img
-            className="RoverMainImg"
-            src={Opportunity}
-            placeholder="Opportunity"
-            alt="Opportunity Rover"
-          />
+          <a href="https://www.jpl.nasa.gov/missions/mars-exploration-rover-opportunity-mer">
+            <img
+              className="RoverMainImg"
+              src={Opportunity}
+              placeholder="Opportunity"
+              alt="Opportunity Rover"
+            />
+          </a>
           <h3 className="roverName">Opportunity</h3>
         </div>
 
         <div className="singleRoverImageTitleContainer">
-          <img
-            className="RoverMainImg"
-            src={Curiosity}
-            placeholder="Curiosity"
-            alt="Curiosity Rover"
-          />
+          <a href="https://mars.nasa.gov/msl/home/">
+            <img
+              className="RoverMainImg"
+              src={Curiosity}
+              placeholder="Curiosity"
+              alt="Curiosity Rover"
+            />
+          </a>
+
           <h3 className="roverName">Curiosity</h3>
         </div>
 
         <div className="singleRoverImageTitleContaner">
-          <img
-            className="RoverMainImg"
-            src={Perseverance}
-            placeholder="Perseverance"
-            alt="Perseverance Rover"
-          />
+          <a href="https://mars.nasa.gov/mars2020/">
+            <img
+              className="RoverMainImg"
+              src={Perseverance}
+              placeholder="Perseverance"
+              alt="Perseverance Rover"
+            />
+          </a>
+
           <h3 className="roverName">Perseverance</h3>
         </div>
       </div>
