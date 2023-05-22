@@ -22,7 +22,7 @@ const App = () => {
         <Link className="links" to="/NasaPhoto" style={{ padding: 5 }}>
           Photo Of the Day
         </Link>
-        <Link className="links" to="/search" style={{ padding: 5 }}>
+        <Link className="links" to="/Search" style={{ padding: 5 }}>
           Rover Photos
         </Link>
       </nav>

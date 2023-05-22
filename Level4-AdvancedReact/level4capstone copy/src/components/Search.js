@@ -160,8 +160,12 @@ const MarsRover = () => {
           API information is not consistent. If you don't successfully receive
           an image, try another date or rover.
         </h5>
-        <br />
+        <hr />
+
         {image && <img className="roverPhoto" src={image} alt="Mars Rover" />}
+
+        <hr />
+        <br />
 
         {/* <h1 className="photoRover">{image.name}</h1>
         <p className="photoDate">{image.earth_date}</p>
