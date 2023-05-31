@@ -1,0 +1,65 @@
+* {
+  box-sizing:border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header{
+  text-align: center;
+}
+
+h2 {
+  margin: 5px;
+}
+
+p {
+  margin: 5px;
+}
+
+form {
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+button {
+  margin: 3px;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.delete-btn {
+  background-color: firebrick;
+  color: whitesmoke;
+}
+
+.edit-btn {
+  background-color: cornflowerblue;
+  color: whitesmoke;
+}
+
+.fugitiveContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px;
+}
+
+.fugitive {
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 5px;
+}
+
+.filter-form {
+  width: 250px;
+}
