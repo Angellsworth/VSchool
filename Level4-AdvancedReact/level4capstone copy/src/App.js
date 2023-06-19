@@ -5,13 +5,13 @@ import Home from "./components/Home";
 import NasaPhoto from "./components/NasaPhoto";
 import Search from "./components/Search";
 
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <div className="App">
       <header>
-        <img src={NasaImage} className="headerImage" />
+        <img src={NasaImage} className="headerImage" alt="Random Nasa pic" />
         <h1 className="headerTitle">Mars Rover</h1>
         <h4 className="headerProject">Level 4 Capstone</h4>
       </header>

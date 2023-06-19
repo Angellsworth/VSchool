@@ -32,7 +32,6 @@ fugitiveRouter.get("/", async (req, res, next) => {
 // Get by alignment(genre)
 fugitiveRouter.get("/search/aligned", async (req, res, next) => {
   console.log(req.query);
-
   try {
     const result = await Fugitive.find({ aligned: req.query.aligned });
     res.send(result);

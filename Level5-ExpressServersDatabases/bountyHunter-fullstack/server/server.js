@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const { v4: uuidv4 } = require("uuid"); // manually add id
-const morgan = require("morgan");
-const mongoose = require("mongoose");
+const morgan = require("morgan"); // handles errors and statuses in terminal
+const mongoose = require("mongoose"); //simplifies connecting to and building database
 
 // Middleware- (for every request)
 app.use(express.json()); // looks for a request body, and turns it into "req.body"
