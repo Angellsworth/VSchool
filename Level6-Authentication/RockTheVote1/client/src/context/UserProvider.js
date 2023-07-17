@@ -20,9 +20,8 @@ export default function UserProvider(props) {
   };
 
   const [userState, setUserState] = useState(initState);
-  const [allTodos, setAllTodos] = useState([]);
 
-  //Signup Function
+  //Sign up function
   function signup(credentials) {
     axios
       .post("/auth/signup", credentials)
@@ -39,7 +38,7 @@ export default function UserProvider(props) {
       .catch((err) => handleAuthErr(err.response.data.errMsg));
   }
 
-  //Login
+  //Login function
   function login(credentials) {
     axios
       .post("/auth/login", credentials)
@@ -57,7 +56,7 @@ export default function UserProvider(props) {
       .catch((err) => handleAuthErr(err.response.data.errMsg));
   }
 
-  //Logout
+  //Logout function
   function logout() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
@@ -66,38 +65,6 @@ export default function UserProvider(props) {
       token: "",
       todos: [],
     });
-  }
-
-  //Add Todo
-  function addTodo(newTodo) {
-    userAxios
-      .post("/api/todo", newTodo)
-      .then((res) => {
-        setUserState((prevState) => ({
-          ...prevState,
-          todos: [...prevState.todos, res.data],
-        }));
-      })
-      .catch((err) => console.log(err.response.data.errMsg));
-  }
-
-  function getAllTodos() {
-    axios
-      .get("/api/todo")
-      .then((res) => setAllTodos(res.data))
-      .catch((err) => console.error(err));
-  }
-
-  function getUserTodos() {
-    userAxios
-      .get("/api/todo/user")
-      .then((res) => {
-        setUserState((prevState) => ({
-          ...prevState,
-          todos: res.data,
-        }));
-      })
-      .catch((err) => console.log(err.response.data.errMsg));
   }
 
   function handleAuthErr(errMsg) {
@@ -114,8 +81,44 @@ export default function UserProvider(props) {
     }));
   }
 
+  //Get One User Todo
+  function getUserTodos() {
+    userAxios
+      .get("/api/todo/user")
+      .then((res) => {
+        setUserState((prevState) => ({
+          ...prevState,
+          todos: res.data,
+        }));
+      })
+      .catch((err) => console.log(err.response.data.errMsg));
+  }
+
+  //Add a Todo
+  function addTodo(newTodo) {
+    userAxios
+      .post("/api/todo", newTodo)
+      .then((res) => {
+        setUserState((prevState) => ({
+          ...prevState,
+          todos: [...prevState.todos, res.data],
+        }));
+      })
+      .catch((err) => console.log(err.response.data.errMsg));
+  }
+
+  //Delete Todo
+  // function deleteTodo(todoID) {
+  //   userAxios.delete(`/api/todo/${todoID}`)
+  //   .then(res => setUserState(prevState => ({
+  //     ...prevState,
+  //     todos: prevState.todos.filter(todo => todo._id !== todoID)
+  //   })))
+  //   .catch(err => console.log(err))
+  // }
+
   return (
-    <UserContext.Provider //add values to this
+    <UserContext.Provider
       value={{
         ...userState,
         signup,
@@ -123,10 +126,6 @@ export default function UserProvider(props) {
         logout,
         addTodo,
         resetAuthErr,
-        allTodos,
-        getAllTodos,
-        getUserTodos,
-        handleAuthErr,
       }}
     >
       {props.children}

@@ -1,3 +1,9 @@
+/* 
+font-family: 'DM Sans', sans-serif;
+font-family: 'DM Serif Display', serif;
+*/
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,103 +12,162 @@
   font-family: sans-serif;
   outline: none;
   text-decoration: none;
+  
+  
 }
-
-.app {
-  background-color: #eee9;
+/* .app {
+  background-image: url(../images/rockAndRoll.avif);
+  background-attachment:scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+} */
+.navbarTitle{
+  margin-left: 150px;
+  font-size: 30px;
+  font-family: 'DM Serif Display', serif;
+  color: whitesmoke;
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
+.navbarContainer {
   align-items: center;
-  height: 40px;
-  background-color: #3339;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #005596c6;
+  border: 2px solid #005596c6;
+  border-radius: 4px;
+}
+
+.links{
+  font-family: 'DM Sans', sans-serif;
+  padding: 10px 0 0 0;
+  font-size: larger;
+  color: whitesmoke;
+  margin: 0;
+}
+
+.logoutButton {
+  margin: 0 150px 0 0;
+  padding: 3px 3px 4px 3px;
+  border-radius: 5px;
+  height: 30px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .auth-container {
+  font-family: 'DM Serif Display', serif;
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  background-color: #cbc5bc55;
 }
 
 .auth-container > h1 {
-  font-size: 2em;
+  font-size: 4em;
   margin: 24px;
+  
 }
 
 .auth-container > p {
   margin: 16px;
   text-decoration: underline;
+  font-family: 'DM Serif Display', serif;
 }
 
 .auth-container > form {
-  border: 1px solid #3339;
+  border: 2px solid #eee9e0;
   padding: 20px;
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
-  background-color: #aaa9;
-
+  background-color: #eee9e09e;
   display: flex;
   flex-direction: column;
+  font-family: 'DM Serif Display', serif;
 }
 
 .auth-container > form > input {
   margin: 16px 8px;
   padding: 8px;
   border-radius: 4px;
+  font-family: 'DM Serif Display', serif;
 }
 
 .auth-container > form > button {
   margin: 16px 8px;
   padding: 8px;
   border-radius: 4px;
+  font-family: 'DM Serif Display', serif;
 }
 
 .todo-list {
-
+  margin-top: 100px;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .todo {
-
+  font-family: 'DM Sans', sans-serif;
+  align-items: center;
+}
+.todoImage{
+  align-items: center;
+  width: 200px;
 }
 
 .public {
   height: 100vh;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .profile {
+  margin: 50px 10px 0 10px;
+  font-family: 'DM Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .profile > h1 {
-  margin: 8px;
-  font-size: 2em;
+  font-family: 'DM Sans', sans-serif;
   text-align: center;
+  font-size: 3.5em;
+  margin: 24px;
+  font-weight: 200;
 }
 
 .profile > h3 {
-  margin: 16px 0;
-  text-decoration: underline;
+  font-family: 'DM Sans', sans-serif;
+  margin: 16px 0 10px 0 0;
+  text-decoration: none;
+  font-size: larger;
+  
 }
 
 .profile > form {
+  border: .5px solid #000;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  margin: 16px 0;
-  border: 1px solid #3339;
-  background-color: #aaa9;
-  padding: 16px;
-  border-radius: 5px
+  font-family: 'DM Sans', sans-serif;
 }
 
-.profile > form > input,
+.profile > form > input{
+margin: 8px 0;
+padding: 10px;
+border-radius: 5px;
+font-family: 'DM Sans', sans-serif;
+}
 .profile > form > button {
   margin: 8px 0;
-  padding: 8px;
-  border-radius: 5px
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'DM Sans', sans-serif;
 }
 

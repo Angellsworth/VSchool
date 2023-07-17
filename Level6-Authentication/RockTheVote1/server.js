@@ -1,24 +1,26 @@
 const express = require("express");
 const app = express();
-require("dotenv").config(); //lets the app know to use dotenv
+require("dotenv").config();
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const { expressjwt } = require("express-jwt");
 
 app.use(express.json());
 app.use(morgan("dev"));
 
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", true);
 
-mongoose.connect(process.env.MONGO_URL, () =>
+mongoose.connect("mongodb://localhost:27017/user-authentication", () =>
   console.log("Connected to the DB")
 );
 
-//For login and signup
 app.use("/auth", require("./routes/authRouter.js"));
-
+app.use(
+  "/api",
+  expressjwt({ secret: process.env.SECRET, algorithms: ["HS256"] })
+); // req.user
 app.use("/api/todo", require("./routes/todoRouter.js"));
 
-//Error handler to catch errors in login
 app.use((err, req, res, next) => {
   console.log(err);
   if (err.name === "UnauthorizedError") {
@@ -27,6 +29,6 @@ app.use((err, req, res, next) => {
   return res.send({ errMsg: err.message });
 });
 
-app.listen(9000, () => {
-  console.log(`The Server is ROCKING on local port 9000`);
+app.listen(8000, () => {
+  console.log(`Server is running on local port 8000`);
 });

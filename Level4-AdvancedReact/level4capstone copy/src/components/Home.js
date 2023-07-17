@@ -20,7 +20,7 @@ const Home = () => {
       <img
         src={backgroundImage}
         className="backgroundImage"
-        alt="galaxy photo"
+        alt="galaxyPhoto"
       />
     </main>
   );

@@ -5,20 +5,20 @@ const bcrypt = require("bcrypt");
 const userSchema = new Schema({
   username: {
     type: String,
-    required: true,
-    lowercase: true,
-    unique: true,
+    required: true, //username is required
+    lowercase: true, //forced to lowercase when saved
+    unique: true, //one username per user
   },
   password: {
     type: String,
-    required: true,
+    required: true, //password is required
   },
   memberSince: {
-    type: Date,
+    type: Date, //saves date when user joined
     default: Date.now,
   },
   isAdmin: {
-    type: Boolean,
+    type: Boolean, //used as a content management system for certain users and their privelages
     default: false,
   },
 });

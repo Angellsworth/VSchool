@@ -6,7 +6,7 @@ export default function Todo(props) {
     <div className="todo">
       <h1>{title}</h1>
       <h3>{description}</h3>
-      <img src={imgUrl} alt="todo pic" className="todoImage" width={300} />
+      <img src={imgUrl} alt="todoImage" width={300} />
     </div>
   );
 }
