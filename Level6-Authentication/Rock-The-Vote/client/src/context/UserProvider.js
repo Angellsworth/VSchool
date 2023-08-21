@@ -15,12 +15,12 @@ export default function UserProvider(props) {
   const initState = {
     user: JSON.parse(localStorage.getItem("user")) || {},
     token: localStorage.getItem("token") || "",
-    todos: [],
+    issues: [],
     errMsg: "",
   };
 
   const [userState, setUserState] = useState(initState);
-  const [allTodos, setAllTodos] = useState([]);
+  const [allIssues, setAllIssues] = useState([]);
 
   //Signup Function
   function signup(credentials) {
@@ -47,13 +47,13 @@ export default function UserProvider(props) {
         const { user, token } = res.data;
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
-        getUserTodos();
         setUserState((prevUserState) => ({
           ...prevUserState,
           user,
           token,
         }));
       })
+
       .catch((err) => handleAuthErr(err.response.data.errMsg));
   }
 
@@ -64,40 +64,76 @@ export default function UserProvider(props) {
     setUserState({
       user: {},
       token: "",
-      todos: [],
+      issues: [],
     });
   }
 
-  //Add Todo
-  function addTodo(newTodo) {
+  function getUserIssues() {
+    console.log(userState);
+    console.log(JSON.parse(localStorage.getItem("user")) || {});
     userAxios
-      .post("/api/todo", newTodo)
+      .get("/api/issue/user")
+      .then((res) => {
+        console.log(res);
+        setUserState((prevState) => ({
+          ...prevState,
+          issues: res.data,
+        }));
+        setAllIssues(res.data);
+      })
+      .catch((err) => console.log(err.response.data.errMsg));
+  }
+
+  //Add Issue
+  function addIssue(newIssue) {
+    userAxios
+      .post("/api/issue", newIssue)
       .then((res) => {
         setUserState((prevState) => ({
           ...prevState,
-          todos: [...prevState.todos, res.data],
+          issues: [...prevState.issues, res.data],
         }));
       })
       .catch((err) => console.log(err.response.data.errMsg));
   }
 
-  function getAllTodos() {
-    axios
-      .get("/api/todo")
-      .then((res) => setAllTodos(res.data))
+  function deletedIssue(issueId) {
+    //   axios
+    //     .delete(`/api/issue/${issueId}`)
+    //     .then((res) => {
+    //     setIssues(prevIssues => prevIssues.filter(issue => issue._id !== issueId))
+    // })
+    //     .catch((err) => console.log(err));
+    // }
+    userAxios
+      .delete(`/api/issue/${issueId}`)
+      .then((res) =>
+        setUserState((prevState) => ({
+          ...prevState,
+          issues: prevState.issues.filter((issue) => issue._id !== issueId),
+        }))
+      )
+      .catch((err) => console.log(err));
+    // return getUserIssues()
+  }
+
+  function editIssue(updates, issueId) {
+    userAxios
+      .put(`api/issue/${issueId}`, updates)
+      .then((res) => {
+        console.log("inside editissue func context", res.data);
+        setAllIssues((prevIssues) =>
+          prevIssues.map((issue) => (issue._id !== issueId ? issue : res.data))
+        );
+      })
+      .catch((err) => console.log(err));
+  }
+
+  function getAllIssues() {
+    userAxios
+      .get("/api/issue")
+      .then((res) => setAllIssues(res.data))
       .catch((err) => console.error(err));
-  }
-
-  function getUserTodos() {
-    userAxios
-      .get("/api/todo/user")
-      .then((res) => {
-        setUserState((prevState) => ({
-          ...prevState,
-          todos: res.data,
-        }));
-      })
-      .catch((err) => console.log(err.response.data.errMsg));
   }
 
   function handleAuthErr(errMsg) {
@@ -107,6 +143,7 @@ export default function UserProvider(props) {
     }));
   }
 
+  //gets rid of error message sets back to empty string
   function resetAuthErr() {
     setUserState((prevState) => ({
       ...prevState,
@@ -114,6 +151,41 @@ export default function UserProvider(props) {
     }));
   }
 
+  function likes(issueId) {
+    userAxios.put(`/api/issue/vote/${issueId}`).then((res) => {
+      console.log(issueId);
+      console.log(res.data);
+      setAllIssues((prevIssues) => {
+        return prevIssues.map((issue) =>
+          issueId !== issue._id ? issue : res.data
+        );
+      });
+      setUserState((prevIssues) => ({
+        ...prevIssues,
+        issues: prevIssues.issues.map((issue) =>
+          issueId !== issue._id ? issue : res.data
+        ),
+      }));
+    });
+  }
+
+  function dislikes(issueId) {
+    userAxios.put(`/api/issue/downVote/${issueId}`).then((res) => {
+      setAllIssues((prevIssues) => {
+        return prevIssues.map((issue) =>
+          issueId !== issue._id ? issue : res.data
+        );
+      });
+      setUserState((prevIssues) => ({
+        ...prevIssues,
+        issues: prevIssues.issues.map((issue) =>
+          issueId !== issue._id ? issue : res.data
+        ),
+      }));
+    });
+  }
+  // console.log("issues");
+  // console.log(issues);
   return (
     <UserContext.Provider //add values to this
       value={{
@@ -121,12 +193,17 @@ export default function UserProvider(props) {
         signup,
         login,
         logout,
-        addTodo,
+        addIssue,
+        deletedIssue,
+        editIssue,
         resetAuthErr,
-        allTodos,
-        getAllTodos,
-        getUserTodos,
+        allIssues,
+        getAllIssues,
+        getUserIssues,
         handleAuthErr,
+        likes,
+        dislikes,
+        userState,
       }}
     >
       {props.children}

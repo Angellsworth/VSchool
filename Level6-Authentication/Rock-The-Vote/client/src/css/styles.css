@@ -13,15 +13,10 @@ font-family: 'DM Serif Display', serif;
   outline: none;
   text-decoration: none;
   
-  
 }
-/* .app {
-  background-image: url(../images/rockAndRoll.avif);
-  background-attachment:scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-} */
+body{
+  background-color: #F1F2F5;
+}
 .navbarTitle{
   margin-left: 150px;
   font-size: 30px;
@@ -33,9 +28,9 @@ font-family: 'DM Serif Display', serif;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  height: 50px;
-  background-color: #005596c6;
-  border: 2px solid #005596c6;
+  height: 60px;
+  background-color: #2e3d86e7;
+  border: 2px solid #2e3d86e7;
   border-radius: 4px;
 }
 
@@ -46,13 +41,27 @@ font-family: 'DM Serif Display', serif;
   color: whitesmoke;
   margin: 0;
 }
+a.links :hover{
+  color: #89E7EE;
+}
 
 .logoutButton {
   margin: 0 150px 0 0;
-  padding: 3px 3px 4px 3px;
-  border-radius: 5px;
+  padding-top: 3px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 4px 6px rgb(69, 68, 68);
   height: 30px;
   font-family: 'DM Sans', sans-serif;
+  color: #005596c6;
+  cursor: pointer;
+}
+.logoutButton:hover{
+  box-shadow: none;
+  transition: all .2s ease;
 }
 
 .auth-container {
@@ -61,12 +70,14 @@ font-family: 'DM Serif Display', serif;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background-color: #cbc5bc55;
+  background-color: #F1F2F5;
+  color: #005596c6;
 }
 
 .auth-container > h1 {
   font-size: 4em;
   margin: 24px;
+  color: #005596c6;
   
 }
 
@@ -74,6 +85,7 @@ font-family: 'DM Serif Display', serif;
   margin: 16px;
   text-decoration: underline;
   font-family: 'DM Serif Display', serif;
+  color: #005596c6;
 }
 
 .auth-container > form {
@@ -81,11 +93,14 @@ font-family: 'DM Serif Display', serif;
   padding: 20px;
   width: 300px;
   height: 300px;
-  border-radius: 5px;
-  background-color: #eee9e09e;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   font-family: 'DM Serif Display', serif;
+  color: #005596c6;
+  border: 1px solid rgba(100, 100, 111, 0.2);
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .auth-container > form > input {
@@ -93,37 +108,135 @@ font-family: 'DM Serif Display', serif;
   padding: 8px;
   border-radius: 4px;
   font-family: 'DM Serif Display', serif;
+  color: #005596c6;
 }
 
 .auth-container > form > button {
   margin: 16px 8px;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 5px 8px rgb(69, 68, 68);
   font-family: 'DM Serif Display', serif;
+  color: #005596c6;
+}
+.auth-container > form > button:hover{
+  box-shadow: none;
+  transition: all .2s ease;
 }
 
-.todo-list {
+.issue-list {
   margin-top: 100px;
   align-items: center;
   font-family: 'DM Sans', sans-serif;
+  color: #005596c6;
 }
 
-.todo {
+.issueContainer {
+  background-color: #FFF;
   font-family: 'DM Sans', sans-serif;
-  align-items: center;
+  color: #005596c6;
+  text-align: center;
+  width: 700px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid rgba(100, 100, 111, 0.2);
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.todoImage{
+.issueTitle{
+  font-weight: 500;
+  font-size: 24px;
+}
+.issueImage{
   align-items: center;
-  width: 200px;
+  justify-content: center;
+  width: 300px;
+  padding: 10px;
+}
+.issueDescription {
+  font-weight: 200;
+  color: #005596c6;
+  font-size: 16px;
+  text-align: left;
+  text-indent: 150px;
+}
+/* .votingBtn {
+  
+} */
+.rating {
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #005596c6;
+  
+}
+button.dislike{
+  margin: 5px;
+  padding: 3px 8px;
+  border: none;
+  background-color: #fff;
+  /* border: 1.6px solid rgb(69, 68, 68);
+  border-radius: 25px;
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  background-color: #f7f0ef; */
+  color: rgb(69, 68, 68);
+  font-weight: 200;
+}
+button.like{
+  margin: 5px;
+  padding: 3px 8px;
+  border: none;
+  background-color: #fff;
+  /* border: 1.6px solid rgb(69, 68, 68);
+  border-radius: 25px;
+  box-shadow: 5px 8px rgb(69, 68, 68); */
+  font-size: 16px;
+  /* background-color: #f7f0ef; */
+  color: rgb(69, 68, 68);
+  font-weight: 200;
+}
+button.like:hover, button.dislike:hover{
+  box-shadow: none;
+  transition: all .2s ease;
+  background-color: #fff;
+}
+
+.like,
+.dislike {
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.dislike:hover,
+.like:hover {
+  background-color: #fff;
+  color: #cc647be2;
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.voteBtn.active {
+  color: #cc647be2;
 }
 
 .public {
   height: 100vh;
+  color: #005596c6;
   font-family: 'DM Sans', sans-serif;
+  text-align: center;
 }
 
 .profile {
   margin: 50px 10px 0 10px;
+  
   font-family: 'DM Sans', sans-serif;
   display: flex;
   flex-direction: column;
@@ -136,6 +249,7 @@ font-family: 'DM Serif Display', serif;
   text-align: center;
   font-size: 3.5em;
   margin: 24px;
+  
   font-weight: 200;
 }
 
@@ -143,18 +257,19 @@ font-family: 'DM Serif Display', serif;
   font-family: 'DM Sans', sans-serif;
   margin: 16px 0 10px 0 0;
   text-decoration: none;
+  color: #005596c6;
   font-size: larger;
   
 }
 
 .profile > form {
-  border: .5px solid #000;
+  border: 1px solid #005596c6;
   padding: 20px;
-  width: 300px;
+  width: 600px;
   height: 300px;
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   font-family: 'DM Sans', sans-serif;
 }
 
@@ -162,12 +277,79 @@ font-family: 'DM Serif Display', serif;
 margin: 8px 0;
 padding: 10px;
 border-radius: 5px;
+border: 1px solid rgb(69, 68, 68);
 font-family: 'DM Sans', sans-serif;
+background-color: #b6babc47;
+}
+::placeholder{
+  color: #005596c6;
 }
 .profile > form > button {
   margin: 8px 0;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  color: whitesmoke;
+  background-color: #848DBD;
   font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+.profile > form > :hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+.public {
+  margin: 50px 10px 0 10px;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+form {
+  border: 1px solid black;
+  padding: 10 px;
+  margin: 5px;
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.delete-btn {
+  margin: 10px;
+  padding: 10px 35px 10px 35px;
+  border: 1.6px solid rgb(69, 68, 68);
+  border-radius: 25px;
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  font-size: 16px;
+  background-color: #FEE6E3;
+  color: rgb(69, 68, 68);
+  font-weight: 200;
+}
+.delete-btn:hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+
+.edit-btn {
+  margin: 10px;
+  padding: 10px 45px 10px 45px;
+  border: 1.6px solid rgb(69, 68, 68);
+  border-radius: 25px;
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  font-size: 16px;
+  background-color: #90b6dc;
+  color: rgb(69, 68, 68);
+  font-weight: 200;
+}
+.edit-btn:hover{
+  box-shadow: none;
+  transition: all .2s ease;
 }
 

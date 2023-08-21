@@ -6,12 +6,15 @@ export default function Navbar(props) {
   return (
     <div className="navbarContainer">
       <h1 className="navbarTitle">RockTheVote</h1>
+
       <Link className="links" to="/profile">
         Profile
       </Link>
+
       <Link className="links" to="/public">
         Public
       </Link>
+
       <button className="logoutButton" onClick={logout}>
         Logout
       </button>

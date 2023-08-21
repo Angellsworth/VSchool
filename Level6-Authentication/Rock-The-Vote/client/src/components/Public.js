@@ -1,17 +1,25 @@
 import React, { useContext, useEffect } from "react";
-import TodoList from "./TodoList.js";
-import Todo from "./Todo.js";
+import IssueList from "./IssueList.js";
+import Issue from "./Issue.js";
 import { UserContext } from "../context/UserProvider.js";
 
 export default function Public() {
   const {
     user: { username },
-    getAllTodos,
-    allTodos,
+    getAllIssues,
+    issues,
+    allIssues,
   } = useContext(UserContext);
+
   useEffect(() => {
-    getAllTodos();
+    getAllIssues();
   }, []);
-  console.log(allTodos);
-  return <div className="public"></div>;
+
+  console.log(allIssues);
+  return (
+    <div className="public">
+      <h1>Home</h1>
+      <IssueList issues={allIssues} />
+    </div>
+  );
 }

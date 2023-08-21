@@ -29,7 +29,7 @@ export default function Auth() {
     e.preventDefault();
     login(inputs);
   }
-
+  //toggles the autherr and the reset autherr
   function toggleForm() {
     setToggle((prev) => !prev);
     resetAuthErr();

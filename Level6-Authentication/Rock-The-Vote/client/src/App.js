@@ -11,6 +11,7 @@ export default function App() {
   const { token, logout } = useContext(UserContext);
   return (
     <div className="app">
+      {/* Is there a token? if so, show the Navbar */}
       {token && <Navbar logout={logout} />}
       {/* If this is truthy, then load the navbar - token gives you conditional views so it only shows up when you login*/}
       <Routes>

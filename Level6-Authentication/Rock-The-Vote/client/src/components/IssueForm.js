@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../context/UserProvider";
 
-const initInputs = {
-  title: "",
-  description: "",
-  imgUrl: "",
-};
-
-export default function TodoForm(props) {
+export default function IssueForm(props) {
+  const initInputs = {
+    title: props.title || "",
+    description: props.description || "",
+    imgUrl: props.img || "",
+  };
+  const { _id } = props;
+  const { getUserIssues, editIssue } = useContext(UserContext);
   const [inputs, setInputs] = useState(initInputs);
-  const { addTodo } = props;
+  // const { addIssue } = props;
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -18,15 +20,23 @@ export default function TodoForm(props) {
     }));
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    addTodo(inputs);
-    setInputs(initInputs);
-  }
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   props.submit(inputs, props._id);
+  //   setInputs(initInputs);
+  //   getUserIssues();
+  // }
 
+  function editSubmit(e) {
+    console.log(`inside editSubmit func`);
+    // e.preventDefault();
+    editIssue(inputs, _id);
+    setInputs(initInputs);
+    getUserIssues();
+  }
   const { title, description, imgUrl } = inputs;
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={editSubmit}>
       <input
         type="text"
         name="title"
@@ -48,7 +58,7 @@ export default function TodoForm(props) {
         onChange={handleChange}
         placeholder="Image Url"
       />
-      <button>Submit Issue</button>
+      <button>{props.btnText}</button>
     </form>
   );
 }

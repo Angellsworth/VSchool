@@ -1,25 +1,30 @@
-import React, { useContext } from "react";
-import TodoForm from "./TodoForm.js";
-import TodoList from "./TodoList.js";
-import Todo from "./Todo.js";
+import React, { useContext, useEffect } from "react";
+import IssueForm from "./IssueForm.js";
+import IssueList from "./IssueList.js";
+// import Issue from "./Issue.js";
 import { UserContext } from "../context/UserProvider.js";
 
 export default function Profile() {
   const {
-    user: { username },
-    addTodo,
-    todos,
+    user: { username, _id },
+    addIssue,
+    issues,
+    getUserIssues,
   } = useContext(UserContext);
+
+  useEffect(() => {
+    getUserIssues();
+  }, []);
 
   return (
     <div className="profile">
       <h1>Welcome {username}!</h1>
-      <h3>Post a new Todo</h3>
+      <h3>Post a new Issue</h3>
       <br />
-      <TodoForm addTodo={addTodo} />
+      <IssueForm submit={addIssue} btnText="Add Issue" />
       <br />
-      <h3>Posted Todos</h3>
-      <TodoList todos={todos} />
+      <h3>Posted Issues</h3>
+      <IssueList issues={issues} />
     </div>
   );
 }

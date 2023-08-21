@@ -51,6 +51,7 @@ authRouter.post("/login", (req, res, next) => {
       }
       //if everything matches we let them in
       const token = jwt.sign(user.withoutPassword(), process.env.SECRET);
+      // console.log(req.auth);
       return res.status(200).send({ token, user: user.withoutPassword() });
     });
   });
