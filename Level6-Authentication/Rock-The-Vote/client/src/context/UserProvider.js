@@ -19,8 +19,15 @@ export default function UserProvider(props) {
     errMsg: "",
   };
 
+  const commentState = {
+    comments: [],
+    errMsg: "",
+  };
+
   const [userState, setUserState] = useState(initState);
   const [allIssues, setAllIssues] = useState([]);
+  const [comments, setComments] = useState(commentState);
+  const [allComments, setAllComments] = useState([]);
 
   //Signup Function
   function signup(credentials) {
@@ -69,12 +76,12 @@ export default function UserProvider(props) {
   }
 
   function getUserIssues() {
-    console.log(userState);
-    console.log(JSON.parse(localStorage.getItem("user")) || {});
+    // console.log(userState);
+    // console.log(JSON.parse(localStorage.getItem("user")) || {});
     userAxios
       .get("/api/issue/user")
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setUserState((prevState) => ({
           ...prevState,
           issues: res.data,
@@ -86,9 +93,12 @@ export default function UserProvider(props) {
 
   //Add Issue
   function addIssue(newIssue) {
+    // console.log(newIssue);
     userAxios
       .post("/api/issue", newIssue)
       .then((res) => {
+        getAllIssues();
+
         setUserState((prevState) => ({
           ...prevState,
           issues: [...prevState.issues, res.data],
@@ -98,13 +108,6 @@ export default function UserProvider(props) {
   }
 
   function deletedIssue(issueId) {
-    //   axios
-    //     .delete(`/api/issue/${issueId}`)
-    //     .then((res) => {
-    //     setIssues(prevIssues => prevIssues.filter(issue => issue._id !== issueId))
-    // })
-    //     .catch((err) => console.log(err));
-    // }
     userAxios
       .delete(`/api/issue/${issueId}`)
       .then((res) =>
@@ -121,10 +124,8 @@ export default function UserProvider(props) {
     userAxios
       .put(`api/issue/${issueId}`, updates)
       .then((res) => {
-        console.log("inside editissue func context", res.data);
-        setAllIssues((prevIssues) =>
-          prevIssues.map((issue) => (issue._id !== issueId ? issue : res.data))
-        );
+        // console.log("inside editissue func context", res.data);
+        getAllIssues();
       })
       .catch((err) => console.log(err));
   }
@@ -186,6 +187,43 @@ export default function UserProvider(props) {
   }
   // console.log("issues");
   // console.log(issues);
+
+  // function addNewComment(newComment, issueId) {
+  //   userAxios
+  //     .post("/api/comment", newComment)
+  //     .then((res) => {
+  //       getAllComments();
+  //       setUserState((prevState) => ({
+  //         ...prevState,
+  //         comments: [...prevState.comments, res.data],
+  //       }));
+  //     })
+  //     .catch((err) => console.log(err.response.data.errMsg));
+  // }
+  // // ADD A COMMENT
+  function addNewComment(newComment, issueId) {
+    console.log(newComment, issueId);
+    userAxios
+      .post(`/api/comment/${issueId}`, newComment)
+      .then((res) => {
+        console.log(res.data);
+        // getAllIssues();
+        setComments((prevState) => ({
+          ...prevState,
+          comments: [prevState.comments, res.data],
+        }));
+      })
+
+      .catch((err) => console.log(err.response.data.errMsg));
+    return getAllComments();
+  }
+
+  function getAllComments() {
+    userAxios
+      .get("/api/comment")
+      .then((res) => setAllComments(res.data))
+      .catch((err) => console.log(err));
+  }
   return (
     <UserContext.Provider //add values to this
       value={{
@@ -204,6 +242,9 @@ export default function UserProvider(props) {
         likes,
         dislikes,
         userState,
+        addNewComment,
+        allComments,
+        getAllComments,
       }}
     >
       {props.children}

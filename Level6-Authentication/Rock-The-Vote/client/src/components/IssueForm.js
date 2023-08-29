@@ -7,7 +7,7 @@ export default function IssueForm(props) {
     description: props.description || "",
     imgUrl: props.img || "",
   };
-  const { _id } = props;
+  const { _id, submit } = props;
   const { getUserIssues, editIssue } = useContext(UserContext);
   const [inputs, setInputs] = useState(initInputs);
   // const { addIssue } = props;
@@ -20,23 +20,16 @@ export default function IssueForm(props) {
     }));
   }
 
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   props.submit(inputs, props._id);
-  //   setInputs(initInputs);
-  //   getUserIssues();
-  // }
-
-  function editSubmit(e) {
-    console.log(`inside editSubmit func`);
-    // e.preventDefault();
-    editIssue(inputs, _id);
+  function handleSubmit(e) {
+    // console.log(`inside editSubmit func`);
+    e.preventDefault();
+    submit(inputs, _id); //
     setInputs(initInputs);
     getUserIssues();
   }
   const { title, description, imgUrl } = inputs;
   return (
-    <form onSubmit={editSubmit}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         name="title"

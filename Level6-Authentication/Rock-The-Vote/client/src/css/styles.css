@@ -133,6 +133,8 @@ a.links :hover{
 }
 
 .issueContainer {
+  align-items: center;
+  justify-content: center;
   background-color: #FFF;
   font-family: 'DM Sans', sans-serif;
   color: #005596c6;
@@ -159,7 +161,9 @@ a.links :hover{
   color: #005596c6;
   font-size: 16px;
   text-align: left;
-  text-indent: 150px;
+  text-indent: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 /* .votingBtn {
   
@@ -225,6 +229,83 @@ button.like:hover, button.dislike:hover{
 
 .voteBtn.active {
   color: #cc647be2;
+}
+input.comment-input{
+  border: none;
+  background-color: #EFF2F5;
+}
+.commentForm {
+  background-color: #EFF2F5;
+  border-radius: 10px;
+  border: 1px solid #EFF2F5;
+  margin: 30px 160px;
+}
+
+.commentBtn{
+  margin: 0 10px 20px 0;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 4px 6px rgb(69, 68, 68);
+  height: 30px;
+  font-family: 'DM Sans', sans-serif;
+  color: #005596c6;
+  cursor: pointer;
+}
+button.commentBtn:hover{
+  box-shadow: none;
+  background-color: #fff;
+  color: #cc647be2;
+  transition: all .2s ease-in-out;
+}
+.individualComment {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: 15px;
+  padding: 5px 10px 10px 30px;
+  border-radius: 25px;
+  color: black;
+  background-color: #EFF2F5;
+}
+.postCommentBtn{
+  margin: 5px 10px 5px 0;
+  padding-top: 3px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 25px;
+  border:  1px solid rgb(69, 68, 68);
+  box-shadow: 1px 2px rgb(69, 68, 68);
+  height: 30px;
+  font-family: 'DM Sans', sans-serif;
+  color: #005596c6;
+  cursor: pointer;
+}
+.postCommentBtn:hover{
+  box-shadow: none;
+  background-color: #fff;
+  color: #cc647be2;
+  transition: all .2s ease-in-out;
+  
+}
+.deleteCommentBtn{
+  margin: 0 10px 0 0;
+  padding-top: 3px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 4px 6px rgb(69, 68, 68);
+  height: 30px;
+  font-family: 'DM Sans', sans-serif;
+  color: #005596c6;
+  cursor: pointer;
 }
 
 .public {

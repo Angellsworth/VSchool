@@ -6,14 +6,6 @@ function Votes({ userLikes, userDislikes, _id }) {
   const [liked, setLiked] = useState();
   const [disliked, setDisliked] = useState();
 
-  //   function hasUserLiked() {
-  //     return userLikes.includes(userState.user._id);
-  //   }
-  //   console.log("here is our string");
-  // //   console.log(hasUserLiked());
-  //   console.log(userLikes);
-  //   console.log(userState);
-  console.log(_id, "id");
   return (
     <div className="rating">
       <p>Total likes: {userLikes.length}</p>

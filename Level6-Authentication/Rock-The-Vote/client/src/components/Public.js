@@ -9,13 +9,15 @@ export default function Public() {
     getAllIssues,
     issues,
     allIssues,
+    getAllComments,
   } = useContext(UserContext);
 
   useEffect(() => {
     getAllIssues();
+    getAllComments();
   }, []);
 
-  console.log(allIssues);
+  // console.log(allIssues);
   return (
     <div className="public">
       <h1>Home</h1>

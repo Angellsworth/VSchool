@@ -1,17 +1,16 @@
 import React from "react"; //{ useState, useEffect }
+// import CommentForm from "./CommentForm";
 
-const CommentSection = ({ token }) => {
+const CommentSection = ({ comments }) => {
+  // console.log(comments);
   return (
-    <div>
-      <h2>Comment</h2>
+    <div className="commentContainer">
+      {/* <CommentForm /> */}
 
-      <div>
-        <textarea placeholder="Write a comment..."></textarea>
-      </div>
-
-      <div>
-        <button>Edit</button>
-        <button>Delete</button>
+      <div className="postedComments">
+        {comments.map((comment) => (
+          <p className="individualComment">{comment.commentText}</p>
+        ))}
       </div>
     </div>
   );

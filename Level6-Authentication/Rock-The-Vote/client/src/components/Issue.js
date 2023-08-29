@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import IssueForm from "./IssueForm";
 import Votes from "./Votes";
 import CommentSection from "./CommentSection";
+import { UserContext } from "../context/UserProvider";
+import CommentForm from "./CommentForm";
 
 export default function Issue(props) {
-  console.log("inside issue comp", props);
+  // console.log("inside issue comp", props);
   const {
     title,
     description,
@@ -15,8 +17,18 @@ export default function Issue(props) {
     likes,
     dislikes,
   } = props;
+  const { allComments } = useContext(UserContext);
   const [editToggle, setEditToggle] = useState(false);
-  console.log(likes);
+  const [commentToggle, setCommentToggle] = useState(false);
+
+  const filteredComments = allComments.filter(
+    (comment) => comment.issueID === _id
+  );
+
+  const commentList = filteredComments.map((comments) => {
+    return <CommentSection comments={filteredComments} />;
+  });
+
   return (
     <div className="issueContainer">
       {!editToggle ? (
@@ -48,7 +60,7 @@ export default function Issue(props) {
             img={imgUrl}
             _id={_id}
             btnText="Submit Editted Issue"
-            editIssue={editIssue}
+            submit={editIssue}
           />
           <button onClick={() => setEditToggle((prevToggle) => !prevToggle)}>
             Close
@@ -58,10 +70,18 @@ export default function Issue(props) {
 
       <br></br>
 
-      <div class="rating">
+      <div className="rating">
         <Votes userLikes={likes} userDislikes={dislikes} _id={_id} />
       </div>
-      <CommentSection />
+
+      <CommentForm _id={_id} />
+      <button
+        onClick={() => setCommentToggle(!commentToggle)}
+        className="commentBtn"
+      >
+        View All Comments
+      </button>
+      {commentToggle && <CommentSection comments={filteredComments} />}
     </div>
   );
 }

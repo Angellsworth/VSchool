@@ -10,10 +10,12 @@ export default function Profile() {
     addIssue,
     issues,
     getUserIssues,
+    getAllComments,
   } = useContext(UserContext);
 
   useEffect(() => {
     getUserIssues();
+    getAllComments();
   }, []);
 
   return (
