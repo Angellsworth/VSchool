@@ -1,0 +1,851 @@
+/* 
+font-family: 'Euphoria Script', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  text-decoration: none;
+}
+body{
+  background-color: #FAFAF9;
+  color: #265862;
+  font-family: 'Raleway', sans-serif;
+}
+.topHeadline{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:#26586254;
+  border-top: 2px solid #EDECE8;
+  border-bottom: 2px solid #EDECE8;
+  padding: 15px;
+  margin-bottom: 1px;
+}
+.headlineH1{
+  font-size: 50px;
+  margin-top:20px;
+  font-family: 'Euphoria Script', cursive;
+  font-weight: 300;
+}
+.headlineH3{
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-weight: 100;
+  font-family: 'Quicksand', sans-serif;
+}
+.navbar {
+  margin: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #C1916D;
+  border: 1px solid #906d52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FBFAF6;
+  text-decoration: none;
+  font-size: 15px;
+}
+a {
+  color: #FBFAF6;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+a:hover {
+  text-decoration: none;
+  font-size: 16px;
+  transition: .7s ease-in-out;
+}
+
+
+.logoutButton {
+  background-color: #C1916D;
+  border: none;
+  border-radius: 10px;;
+  padding: 5px;
+  color: #FBFAF6;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+.logoutButton:hover{
+  text-decoration: none;
+  font-size: 16px;
+  transition: .7s ease-in-out;
+}
+
+.auth-container {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #F1F2F5;
+  color: #005596c6;
+}
+
+.auth-container > h1 {
+  font-size: 24px;
+  margin: 24px;
+  color: #265862;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.auth-container > p {
+  margin: 16px;
+  text-decoration: underline;
+  font-family: 'DM Serif Display', serif;
+  color: #265862;
+}
+
+.auth-container > form {
+  border: 2px solid #eee9e0;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Serif Display', serif;
+  color: #265862;
+  border: 1px solid rgba(100, 100, 111, 0.2);
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.auth-container > form > input {
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  color: #005596c6;
+}
+
+.auth-container > form > button {
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  font-family: 'DM Serif Display', serif;
+  color: #265862;
+  font-family: 'Quicksand', sans-serif;
+}
+.auth-container > form > button:hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+.auth-container > p {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.recipe-list {
+  margin-top: 100px;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  color: #005596c6;
+}
+
+.recipeContainer {
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  font-family: 'DM Sans', sans-serif;
+  color: #265862;
+  text-align: center;
+  width: 700px;
+  margin: 10px;
+  padding: 30px;
+  border: 2px solid rgba(193, 145, 109, 0.2);
+  border-radius: 50px;
+  box-shadow: rgba(193, 145, 109, 0.3) 0px 7px 29px 0px;	
+}
+.recipeTitle{
+  font-weight: 500;
+  font-size: 54px;
+  font-family: 'Euphoria Script', cursive;
+}
+.recipeImage{
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 10px;
+}
+.recipeInstructions {
+  font-weight: 200;
+  color: #265862;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 50px;
+  margin: 10px 80px;
+  padding: 20px;
+  border: 1px solid #C1916D;
+  border-radius: 20px;
+}
+.ingredientBtn{
+  width:fit-content;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  color: whitesmoke;
+  background-color: #265862;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+}
+.ingredientBtn:hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+.ingredientListContainer {
+  display: flex;
+  flex-direction: column;
+}
+  .ingredientList {
+    font-size: 15px;
+    margin: 10px 80px 20px 80px;
+    padding: 15px;
+    border: 1px solid #C1916D;
+    border-radius: 20px;
+    font-weight: 200;
+  }
+  
+profile.h3 {
+  margin-bottom: 10px;
+}
+
+.public {
+  height: 100vh;
+  color: #265862;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.profile {
+  margin: 50px 10px 0 10px;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+.profile > h1 {
+  text-align: center;
+  font-size: 3.5em;
+  margin: 24px;
+  font-family: 'Euphoria Script', cursive;
+  font-weight: 200;
+}
+
+.profile > h3 {
+  font-family: 'Raleway', sans-serif;
+  margin: 16px 0 10px 0 0;
+  text-decoration: none;
+  color: #265862;
+  font-size: larger;
+}
+
+.profile > form {
+  border: 1px solid #265862;
+  padding: 20px;
+  width: 600px;
+  height: fit-content;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; 
+  font-family: 'Raleway', sans-serif;
+}
+
+.profile > form > input{
+margin: 8px 0;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid rgb(69, 68, 68);
+font-family: 'Raleway', sans-serif;
+background-color: #b6babc47;
+}
+::placeholder{
+  color: #265862;
+}
+.profile > form > button {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1.6px solid rgb(69, 68, 68);
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  color: whitesmoke;
+  background-color: #265862;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+}
+.profile > form > :hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+
+.public {
+  margin: 50px 10px 0 10px;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+form {
+  border: 1px solid black;
+  padding: 10 px;
+  margin: 5px;
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.delete-btn {
+  margin: 10px;
+  padding: 5px 10px;
+  border: 1.6px solid rgb(69, 68, 68);
+  border-radius: 25px;
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #d2b599;
+  color: rgb(69, 68, 68);
+  font-weight: 300;
+}
+.delete-btn:hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+
+.edit-btn {
+  margin: 10px;
+  padding: 5px 18.5px;
+  border: 1.6px solid rgb(69, 68, 68);
+  border-radius: 25px;
+  box-shadow: 5px 8px rgb(69, 68, 68);
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #bdced4;
+  color: rgb(69, 68, 68);
+  font-weight: 300;
+}
+.edit-btn:hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .headlineH1 {
+    font-size: 30px;
+  }
+  .headlineH3{
+    font-size: 9px;
+  }
+}
+
+  
+  /* Base styles for all screen sizes */
+
+/* Styles for Extra Small screens (up to 576px) */
+@media (max-width: 576px) {
+  .headlineH1 {
+    font-size: 34px;
+  }
+  .headlineH3{
+    font-size: 12px;
+  }
+  .auth-container {
+    height: 100vh;
+  }
+  .auth-container > h1 {
+    font-size: 24px;
+  }
+
+.auth-container > p {
+  margin: 10px;
+}
+
+.auth-container > form {
+  border: 1px solid #eee9e0;
+  padding: 30px 30px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container > form > input {
+  margin: 8px 4px;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.auth-container > form > button {
+  margin: 8px 4px;
+  padding: 4px;
+  width:90%;
+  font-size: 12px;
+}
+
+.auth-container > p {
+  font-size: 12px;
+}
+
+.recipe-list {
+  margin-top: 50px;
+  align-items: center;
+}
+
+.recipeContainer {
+  width: 350px;
+  margin: 10px;
+  padding: 15px;
+}
+.recipeTitle{
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.recipeImage{
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 10px;
+}
+.recipeInstructions {
+  font-weight: 200;
+  font-size: 11px;
+  text-align: left;
+  text-indent: 20px;
+  margin: 0px 0px;
+  padding: 8px;
+}
+.ingredientBtn{
+  width:fit-content;
+  margin: 8px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.ingredientBtn:hover{
+  box-shadow: none;
+  transition: all .2s ease;
+}
+  .ingredientList {
+    font-size: 11px;
+    margin: 10px 0px ;
+    padding: 15px;
+  }  
+profile.h3 {
+  margin-bottom: 8px;
+}
+.public {
+  height: 100vh;
+  color: #265862;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+.profile {
+  margin: 25px 10px 0 10px;
+  height: 40vh;
+}
+.profile > h1 {
+  font-size: 34px;
+}
+.profile > h3 {
+  margin: 16px 0 10px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.profile > form {
+  padding: 20px;
+  width: 400px;
+  height: fit-content;
+}
+.profile > form > input{
+margin: 8px 0;
+padding: 6px;
+font-size: 13px;
+}
+.profile > form > button {
+  margin: 8px 0;
+  padding: 8px;
+  font-size: 12px;
+}
+.public {
+  margin: 25px 10px 0 10px;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+form {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+}
+input {
+  padding: 10px;
+  font-size: 12px;
+}
+.delete-btn {
+  margin: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.edit-btn {
+  margin: 10px;
+  padding: 5px 17px;
+  font-size: 12px;
+}
+label{
+  font-size: 12px;
+}
+p{
+  font-size: 12px;
+}
+a {
+  font-size: 12px;
+}
+a.links {
+  font-size: 12px;
+}
+.logoutButton{
+  font-size: 12px;
+}
+}
+
+/* Styles for Small screens (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .headlineH1 {
+    font-size: 44px;
+  }
+  .headlineH3{
+    font-size: 16px;
+  }
+  .auth-container {
+    height: 100vh;
+  }
+  .auth-container > h1 {
+    font-size: 34px;
+  }
+
+.auth-container > p {
+  margin: 10px;
+  font-size: 14px;
+}
+
+.auth-container > form {
+  padding: 50px 30px;
+  width: 400px;
+  height: 300px;
+}
+
+.auth-container > form > input {
+  margin: 12px 8px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.auth-container > form > button {
+  margin: 10px 6px;
+  padding: 6px 0;
+  width:96%;
+  font-size: 14px;
+}
+
+.auth-container > p {
+  font-size: 14px;
+}
+
+.recipe-list {
+  margin-top: 80px;
+  align-items: center;
+}
+
+.recipeContainer {
+  width: 600px;
+  margin: 10px;
+  padding: 15px;
+}
+.recipeTitle{
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.recipeImage{
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  padding: 10px;
+}
+.recipeInstructions {
+  font-weight: 200;
+  font-size: 13px;
+  text-indent: 25px;
+  margin: 0px 0px;
+  padding: 10px;
+}
+.ingredientBtn{
+  width:fit-content;
+  margin: 8px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+  .ingredientList {
+    font-size: 13px;
+    margin: 10px 0px ;
+    padding: 10px;
+  }  
+profile.h3 {
+  margin-bottom: 10px;
+}
+.public {
+  height: 100vh;
+}
+.profile {
+  margin: 25px 10px 0 10px;
+  height: 60vh;
+}
+.profile > h1 {
+  font-size: 44px;
+}
+.profile > h3 {
+  margin: 16px 0 10px 0 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.profile > form {
+  padding: 20px;
+  width: 500px;
+  height: fit-content;
+}
+.profile > form > input{
+margin: 8px 0;
+padding: 6px;
+font-size: 14px;
+}
+.profile > form > button {
+  margin: 8px 0;
+  padding: 8px;
+  font-size: 14px;
+}
+.public {
+  margin: 25px 10px 0 10px;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+form {
+  padding: 10px;
+  margin: 5px;
+}
+input {
+  padding: 12px;
+  font-size: 13px;
+}
+.delete-btn {
+  margin: 10px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+.edit-btn {
+  margin: 10px;
+  padding: 5px 17px;
+  font-size: 13px;
+}
+label{
+  font-size: 13px;
+}
+p{
+  font-size: 13px;
+}
+a {
+  font-size: 13px;
+}
+a.links {
+  font-size: 13px;
+}
+.logoutButton{
+  font-size: 13px;
+}
+}
+
+/* Styles for Medium screens (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .headlineH1 {
+    font-size: 54px;
+  }
+  .headlineH3{
+    font-size: 18px;
+  }
+  .auth-container {
+    height: 100vh;
+  }
+  .auth-container > h1 {
+    font-size: 44px;
+  }
+
+.auth-container > p {
+  margin: 10px;
+  font-size: 16px;
+}
+
+.auth-container > form {
+  padding: 50px 30px;
+  width: 500px;
+  height: 400px;
+}
+
+.auth-container > form > input {
+  margin: 12px 8px;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.auth-container > form > button {
+  margin: 10px 6px;
+  padding: 6px 0;
+  width:100%;
+  font-size: 16px;
+}
+
+.auth-container > p {
+  font-size: 16px;
+}
+
+.recipe-list {
+  margin-top: 90px;
+  align-items: center;
+}
+
+.recipeContainer {
+  width: 700px;
+  margin: 10px;
+  padding: 15px;
+}
+.recipeTitle{
+  font-size: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.recipeImage{
+  width: 350px;
+  padding: 10px;
+}
+.recipeInstructions {
+  font-weight: 200;
+  font-size: 15px;
+  text-indent: 25px;
+  margin: 0px 0px;
+  padding: 10px;
+}
+.ingredientBtn{
+  width:fit-content;
+  margin: 8px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+  .ingredientList {
+    font-size: 15px;
+    margin: 10px 0px ;
+    padding: 10px;
+  }  
+profile.h3 {
+  margin-bottom: 10px;
+}
+.public {
+  height: 100vh;
+}
+.profile {
+  margin: 25px 10px 0 10px;
+  height: 60vh;
+}
+.profile > h1 {
+  font-size: 54px;
+}
+.profile > h3 {
+  margin: 16px 0 10px 0 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.profile > form {
+  padding: 20px;
+  width: 600px;
+  height: fit-content;
+}
+.profile > form > input{
+margin: 8px 0;
+padding: 6px;
+font-size: 16px;
+}
+.profile > form > button {
+  margin: 8px 0;
+  padding: 8px;
+  font-size: 16px;
+}
+.public {
+  margin: 25px 10px 0 10px;
+  height: 80vh;
+}
+form {
+  padding: 10px;
+  margin: 5px;
+}
+input {
+  padding: 12px;
+  font-size: 15px;
+}
+.delete-btn {
+  margin: 10px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+.edit-btn {
+  margin: 10px;
+  padding: 5px 17px;
+  font-size: 15px;
+}
+label{
+  font-size: 15px;
+}
+p{
+  font-size: 15px;
+}
+a {
+  font-size: 15px;
+}
+a.links {
+  font-size: 15px;
+}
+.logoutButton{
+  font-size: 15px;
+}
+}

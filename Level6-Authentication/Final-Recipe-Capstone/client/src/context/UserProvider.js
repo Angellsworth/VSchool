@@ -15,7 +15,7 @@ export default function UserProvider(props) {
   const initState = {
     user: JSON.parse(localStorage.getItem("user")) || {},
     token: localStorage.getItem("token") || "",
-    issues: [],
+    recipes: [],
     errMsg: "",
   };
 
@@ -25,7 +25,7 @@ export default function UserProvider(props) {
   };
 
   const [userState, setUserState] = useState(initState);
-  const [allIssues, setAllIssues] = useState([]);
+  const [allRecipes, setAllRecipes] = useState([]);
   const [comments, setComments] = useState(commentState);
   const [allComments, setAllComments] = useState([]);
 
@@ -71,71 +71,73 @@ export default function UserProvider(props) {
     setUserState({
       user: {},
       token: "",
-      issues: [],
+      recipes: [],
     });
   }
 
-  function getUserIssues() {
+  function getUserRecipes() {
     // console.log(userState);
     // console.log(JSON.parse(localStorage.getItem("user")) || {});
     userAxios
-      .get("/api/issue/user")
+      .get("/api/recipe/user")
       .then((res) => {
         // console.log(res);
         setUserState((prevState) => ({
           ...prevState,
-          issues: res.data,
+          recipes: res.data,
         }));
-        setAllIssues(res.data);
+        setAllRecipes(res.data);
       })
       .catch((err) => console.log(err.response.data.errMsg));
   }
 
-  //Add Issue
-  function addIssue(newIssue) {
-    // console.log(newIssue);
+  //Add Recipe
+  function addRecipe(newRecipe) {
+    // console.log(newRecipe);
     userAxios
-      .post("/api/issue", newIssue)
+      .post("/api/recipe", newRecipe)
       .then((res) => {
-        getAllIssues();
+        getAllRecipes();
 
         setUserState((prevState) => ({
           ...prevState,
-          issues: [...prevState.issues, res.data],
+          recipes: [...prevState.recipes, res.data],
         }));
       })
       .catch((err) => console.log(err.response.data.errMsg));
   }
 
-  //delete Issue
-  function deletedIssue(issueId) {
+  //delete Recipe
+  function deletedRecipe(recipeId) {
     userAxios
-      .delete(`/api/issue/${issueId}`)
+      .delete(`/api/recipe/${recipeId}`)
       .then((res) =>
         setUserState((prevState) => ({
           ...prevState,
-          issues: prevState.issues.filter((issue) => issue._id !== issueId),
+          recipes: prevState.recipes.filter(
+            (recipe) => recipe._id !== recipeId
+          ),
         }))
       )
       .catch((err) => console.log(err));
-    // return getUserIssues()
+    // return getUserRecipes()
   }
 
-  //edit Issue
-  function editIssue(updates, issueId) {
+  //edit Recipe
+  function editRecipe(updates, recipeId) {
     userAxios
-      .put(`api/issue/${issueId}`, updates)
+      .put(`api/recipe/${recipeId}`, updates)
       .then((res) => {
-        // console.log("inside editissue func context", res.data);
-        getAllIssues();
+        // console.log("inside editrecipe func context", res.data);
+        getAllRecipes();
       })
       .catch((err) => console.log(err));
   }
 
-  function getAllIssues() {
+  function getAllRecipes() {
     userAxios
-      .get("/api/issue")
-      .then((res) => setAllIssues(res.data))
+      .get("/api/recipe")
+      .then((res) => setAllRecipes(res.data))
       .catch((err) => console.error(err));
   }
 
@@ -154,47 +156,47 @@ export default function UserProvider(props) {
     }));
   }
 
-  function likes(issueId) {
-    userAxios.put(`/api/issue/vote/${issueId}`).then((res) => {
-      console.log(issueId);
+  function likes(recipeId) {
+    userAxios.put(`/api/recipe/vote/${recipeId}`).then((res) => {
+      console.log(recipeId);
       console.log(res.data);
-      setAllIssues((prevIssues) => {
-        return prevIssues.map((issue) =>
-          issueId !== issue._id ? issue : res.data
+      setAllRecipes((prevRecipes) => {
+        return prevRecipes.map((recipe) =>
+          recipeId !== recipe._id ? recipe : res.data
         );
       });
-      setUserState((prevIssues) => ({
-        ...prevIssues,
-        issues: prevIssues.issues.map((issue) =>
-          issueId !== issue._id ? issue : res.data
+      setUserState((prevRecipes) => ({
+        ...prevRecipes,
+        recipes: prevRecipes.recipes.map((recipe) =>
+          recipeId !== recipe._id ? recipe : res.data
         ),
       }));
     });
   }
 
-  function dislikes(issueId) {
-    userAxios.put(`/api/issue/downVote/${issueId}`).then((res) => {
-      setAllIssues((prevIssues) => {
-        return prevIssues.map((issue) =>
-          issueId !== issue._id ? issue : res.data
+  function dislikes(recipeId) {
+    userAxios.put(`/api/recipe/downVote/${recipeId}`).then((res) => {
+      setAllRecipes((prevRecipes) => {
+        return prevRecipes.map((recipe) =>
+          recipeId !== recipe._id ? recipe : res.data
         );
       });
-      setUserState((prevIssues) => ({
-        ...prevIssues,
-        issues: prevIssues.issues.map((issue) =>
-          issueId !== issue._id ? issue : res.data
+      setUserState((prevRecipes) => ({
+        ...prevRecipes,
+        recipes: prevRecipes.recipes.map((recipe) =>
+          recipeId !== recipe._id ? recipe : res.data
         ),
       }));
     });
   }
 
-  function addNewComment(newComment, issueId) {
-    console.log(newComment, issueId);
+  function addNewComment(newComment, recipeId) {
+    console.log(newComment, recipeId);
     userAxios
-      .post(`/api/comment/${issueId}`, newComment)
+      .post(`/api/comment/${recipeId}`, newComment)
       .then((res) => {
         console.log(res.data);
-        // getAllIssues();
+        // getAllRecipes();
         setComments((prevState) => ({
           ...prevState,
           comments: [prevState.comments, res.data],
@@ -218,13 +220,13 @@ export default function UserProvider(props) {
         signup,
         login,
         logout,
-        addIssue,
-        deletedIssue,
-        editIssue,
+        addRecipe,
+        deletedRecipe,
+        editRecipe,
         resetAuthErr,
-        allIssues,
-        getAllIssues,
-        getUserIssues,
+        allRecipes,
+        getAllRecipes,
+        getUserRecipes,
         handleAuthErr,
         likes,
         dislikes,

@@ -1,8 +1,8 @@
 const express = require("express");
 const issueRouter = express.Router();
 const Issue = require("../models/issue.js");
-const { expressjwt } = require("express-jwt");
-require("dotenv").config();
+`const { expressjwt } = require("express-jwt");
+require("dotenv").config();`;
 
 // Get All Todos
 issueRouter.get("/", async (req, res, next) => {
